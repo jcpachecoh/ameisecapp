@@ -1,12 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import React from 'react';
 
-import Routes from '../Routes';
+import HomePage from '../../pages/HomePage';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes />
+    <BrowserRouter basename={window.location.pathname || ''}>
+      <Route exact path="/" component={HomePage} />
     </BrowserRouter>
   );
 };
