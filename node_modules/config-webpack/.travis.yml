@@ -1,0 +1,16 @@
+language: node_js
+node_js: node
+env:
+install:
+  - npm install
+script:
+  - npm run test3 # The pretest hook runs a build
+  - npm run test4
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_API_KEY"
+  on:
+    branch: deploy
+    tags: true
