@@ -8,7 +8,6 @@ import PrincipalBanner from './components/PrincipalBanner';
 import ContactUsBanner from './components/ContactUsBanner';
 import UsBanner from './components/UsBanner';
 import DotacionesBanner from './components/DotacionesBanner';
-import HamburgerMenu from '../../components/HamburgerMenu';
 
 export function HomePage() {
   const isLogged = useSelector(state => state.user.isLogged);
@@ -24,10 +23,10 @@ export function HomePage() {
 
   return (
     <Fragment>
-      <HamburgerMenu />
       <ReactPageScroller
-          pageOnChange={handlePageChange}
-          customPageNumber={pageNumber}
+        renderAllPagesOnFirstRender
+        pageOnChange={handlePageChange}
+        customPageNumber={pageNumber}
       >
         <PrincipalBanner />
         <ContactUsBanner />
