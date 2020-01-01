@@ -33,8 +33,6 @@ export const StylesMenuToogle = styled.div`
     top: -7px;
     left: -5px;
 
-    cursor: pointer;
-
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
 
