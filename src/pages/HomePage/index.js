@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
+import React, { Fragment, useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Dashboard from './Dashboard';
 
@@ -8,14 +8,16 @@ import PrincipalBanner from './components/PrincipalBanner';
 import ContactUsBanner from './components/ContactUsBanner';
 import UsBanner from './components/UsBanner';
 import DotacionesBanner from './components/DotacionesBanner';
+import { reduxActions } from '../../constants';
 
 export function HomePage() {
   const isLogged = useSelector(state => state.user.isLogged);
   const pageNumber = useSelector(state => state.app.pageNumber);
+  const dispatch = useDispatch();
 
-  const handlePageChange = (evt) => {
-    console.log(evt);
-  }
+  const handlePageChange = useCallback((pageNumber) => {
+    dispatch({ type: reduxActions.UPDATE_PAGE_VIEW, payload: pageNumber });
+  }, [dispatch]);
 
   if (isLogged) {
     return <Dashboard />;
