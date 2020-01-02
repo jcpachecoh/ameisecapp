@@ -3,7 +3,7 @@ import { mainColors } from '../../../constants';
 
 export const StylesFullBanner = styled.div`
   display: flex;
-  height: 100%;
+  height: 900px;
   width: 100%;
   color: ${mainColors.white}
 `;

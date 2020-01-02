@@ -22,6 +22,8 @@ export const reduxActions = {
 };
 
 export const mainColors = {
-  brandColor: '#001f3f',
+  brandColor: '#01A8E8',
   white: '#ffffff',
+  lightGray: '#F3F3F3',
+  darkGray: '#B3B3B3'
 };

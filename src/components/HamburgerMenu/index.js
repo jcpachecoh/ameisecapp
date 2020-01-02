@@ -1,17 +1,14 @@
-import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 
 import { StylesMenuToogle, StylesMenu } from './styles.js';
-import { mainMenu, reduxActions } from '../../constants/index.js';
-import Button from '../Button/index.js';
+import { mainMenu } from '../../constants/index.js';
+import shoppingcar from '../../../public/assets/shoppingcar.png';
+import Icon from '../Icon/index.js';
 
 export default function HamburgerMenu() {
-  const dispatch = useDispatch();
-
-  const handleClick = useCallback((event) => {
-    const pageNumber = parseInt(event.target.getAttribute('data-key'), 10);
-    dispatch({ type: reduxActions.UPDATE_PAGE_VIEW, payload: pageNumber });
-  }, [dispatch]);
+  const handleClick = (evt) => {
+    console.log('evt', evt.target.getAttribute('data-key'));
+  }
 
   const handleLogin = () => {
     console.log('lgin');
@@ -31,9 +28,7 @@ export default function HamburgerMenu() {
           )}
         </StylesMenu>
       </div>
-      <div>
-        <Button onClick={handleLogin} value={'Logga in'} type={'secondary'}></Button>
-      </div>
+      <Icon image={shoppingcar} size={'small'} onClick={handleClick} />
     </StylesMenuToogle>
   );
 }

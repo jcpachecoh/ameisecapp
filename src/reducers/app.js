@@ -1,7 +1,7 @@
 import { reduxActions } from '../constants';
 
 const initialState = {
-  pageNumber: 0,
+  pageNumber: null,
   showMenu: true,
 };
 
