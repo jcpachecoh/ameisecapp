@@ -1,14 +1,25 @@
-import React from 'react'
-import Banner from '../../../components/Banner'
+import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import lana from '../../../../public/assets/lana.jpg';
+
+import Banner from '../../../components/Banner'
 import { StylesFullBanner } from './styles';
+import Button from '../../../components/Button';
 
 export default function DotacionesBanner() {
+
+    let history = useHistory();
+
+    function handleClick() {
+      history.push("/dotaciones");
+    }
+
     return (
         <StylesFullBanner>
             <Banner bgImage={lana}>
-                <h2>Dotaciones</h2>
+                <span>!Dotaciones Para Trabajo en frio!</span>
+                <Button onClick={handleClick} value="Saber mas" />
             </Banner>
         </StylesFullBanner>
     )

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mainColors } from '../../constants';
 
 export const StylesContainer = styled.div`
   display: flex;
@@ -9,12 +10,14 @@ export const StylesContainer = styled.div`
   width: 80%;
   padding: 210px 0;
 
-  > div {
+  > span {
     text-align: center;
     margin: 10px;
   }
-  div:first-child {
+  span:first-child {
     font-size: 36px;
-    color: #ffffff;
+    color: ${mainColors.white};
+    font-weight: 800;
+    z-index: 10;
   }
 `;

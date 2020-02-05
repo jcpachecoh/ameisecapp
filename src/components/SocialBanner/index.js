@@ -12,9 +12,9 @@ function SocialBanner() {
 
     return (
         <StyledSocialBanner>
-            <Icon image={facebook} size={'medium'} onClick={handleSocial} />
-            <Icon image={twitter} size={'medium'} onClick={handleSocial} />
-            <Icon image={instagram} size={'medium'} onClick={handleSocial} />
+            <Icon image={facebook} size={'64px'} onClick={handleSocial} />
+            <Icon image={twitter} size={'64px'} onClick={handleSocial} />
+            <Icon image={instagram} size={'64px'} onClick={handleSocial} />
         </StyledSocialBanner>
     )
 }

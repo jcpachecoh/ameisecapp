@@ -1,18 +1,21 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import Button from '../../../components/Button';
 
 import { StylesContainer } from '../styles';
 
 export default function MainBanner() {
+  let history = useHistory();
+
   function handleClick() {
-    console.log('more is');
+    history.push("/hombre");
   }
 
   return (
     <StylesContainer>
-      <div>loSunt culpa officia deserunt non non pariatur fugiat anim nisi.</div>
-      <Button onClick={handleClick} value="More Info ...!" />
+      <span>!Nueva Colección de Hombre!</span>
+      <Button onClick={handleClick} value="Descubrela" />
     </StylesContainer>
   );
 }

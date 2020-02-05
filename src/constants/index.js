@@ -1,19 +1,23 @@
 export const mainMenu = [
   {
     key: 0,
-    label: 'Nosotros',
+    label: 'Hombre',
+    link: '/hombre'
   },
   {
     key: 1,
-    label: 'Contactos',
+    label: 'Dama',
+    link: '/dama'
   },
   {
     key: 2,
-    label: 'Portafolio',
+    label: 'Dotaciones',
+    link: '/dotaciones'
   },
   {
     key: 3,
-    label: 'Dotaciones'
+    label: 'Contactanos',
+    link: '/contacto'
   }
 ];
 
@@ -25,5 +29,5 @@ export const mainColors = {
   brandColor: '#01A8E8',
   white: '#ffffff',
   lightGray: '#F3F3F3',
-  darkGray: '#B3B3B3'
+  darkGray: '#B3B3B3',
 };

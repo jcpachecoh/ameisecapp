@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { mainColors } from '../../constants';
 
 export const StyledEmailPromotion = styled.div`
-
   display: flex;
   flex-direction: column;
   background-color: ${mainColors.lightGray};

@@ -13,6 +13,22 @@ export const StylesMenuToogle = styled.div`
   padding: 0.5em;
   border-bottom: 1px solid grey;
   justify-content: space-between;
+  z-index: 100;
+
+  a {
+    font-size: 20px;
+    color: ${mainColors.white};
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: ${mainColors.white};
+    }
+    &:visited {
+      text-decoration: none;
+      color: ${mainColors.white};
+    }
+  }
+
 
   li {
     text-decoration: none;
@@ -98,5 +114,9 @@ export const StylesMenu = styled.ul`
   li {
     padding: 10px 30px;
     font-size: 22px;
+  }
+
+  a {
+    color: ${mainColors.white}
   }
 `;

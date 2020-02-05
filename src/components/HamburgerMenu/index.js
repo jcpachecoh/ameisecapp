@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useHistory } from "react-router-dom";
 
 import { StylesMenuToogle, StylesMenu } from './styles.js';
 import { mainMenu } from '../../constants/index.js';
@@ -14,6 +15,12 @@ export default function HamburgerMenu() {
     console.log('lgin');
   }
 
+  const handleHome = () => {
+    console.log('juan')
+    let history = useHistory();
+    history.push('../')
+  }
+
   return (
     <StylesMenuToogle>
       <div>
@@ -23,12 +30,17 @@ export default function HamburgerMenu() {
         <span></span>
         <StylesMenu>
           {mainMenu.map((item, idx) => {
-            return <li onClick={handleClick} data-key={idx} key={idx}>{item.label}</li>
-          }
+            return (
+              <li onClick={handleClick} data-key={idx} key={idx}>
+                <Link to={item.link}>{item.label}</Link>
+              </li>
+            )
+            }
           )}
         </StylesMenu>
       </div>
-      <Icon image={shoppingcar} size={'small'} onClick={handleClick} />
+      <Link to="/">RS</Link>
+      <Icon image={shoppingcar} size={'32px'} onClick={handleClick} />
     </StylesMenuToogle>
   );
 }

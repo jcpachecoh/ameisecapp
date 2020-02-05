@@ -2,19 +2,17 @@ import React, { Fragment, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import PrincipalBanner from './components/PrincipalBanner';
-import ContactUsBanner from './components/ContactUsBanner';
-import UsBanner from './components/UsBanner';
 import DotacionesBanner from './components/DotacionesBanner';
 import Footer from '../../components/Footer';
+import GridFeatures from '../../components/GridFeatures';
+import Title from '../../components/Title/Title';
 
 export function HomePage() {
-  const isLogged = useSelector(state => state.user.isLogged);
-
   return (
     <Fragment>
       <PrincipalBanner />
-      <ContactUsBanner />
-      <UsBanner />
+      <Title value={'!Aprovecha nuestras grandes caracteristicas!'} />
+      <GridFeatures />
       <DotacionesBanner />
       <Footer />
     </Fragment>

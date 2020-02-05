@@ -1,13 +1,18 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-import { StylesBanner } from './styles';
+import { StylesBanner, StyledOverlay } from './styles';
 
-export default function Banner({ bgImage, children }) {
-  return <StylesBanner background={bgImage}>{children}</StylesBanner>;
+function Banner({ bgImage, children }) {
+  return <StylesBanner background={bgImage}>
+    <StyledOverlay />
+    {children}
+  </StylesBanner>;
 }
 
 Banner.propTypes = {
   bgImage: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
+
+export default Banner;
