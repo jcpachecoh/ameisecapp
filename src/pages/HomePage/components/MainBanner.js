@@ -15,7 +15,7 @@ export default function MainBanner() {
   return (
     <StylesContainer>
       <span>!Nueva Colección de Hombre!</span>
-      <Button onClick={handleClick} value="Descubrela" />
+      <Button onClick={handleClick} value="Descubrela"  zIndex={10} />
     </StylesContainer>
   );
 }

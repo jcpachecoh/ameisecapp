@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 
 import { StyledButton } from './styles';
 
-export function Button({ onClick, value, type }) {
+export function Button({ onClick, value, type, zIndex }) {
   return (
-    <StyledButton onClick={onClick} type={type}>
-    {value}
+    <StyledButton onClick={onClick} type={type} zIndex={zIndex}>
+      {value}
     </StyledButton>
   );
 }
 
 Button.propTypes = {
   onClick: PropTypes.func,
+  type: PropTypes.string,
   value: PropTypes.string.isRequired,
-  type: PropTypes.string
+  zIndex: PropTypes.number,
 };
 
 export default Button;
