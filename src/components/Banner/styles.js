@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { mainColors } from '../../constants';
 
 export const StylesBanner = styled.div`

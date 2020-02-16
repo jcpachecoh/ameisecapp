@@ -1,17 +1,16 @@
-import React from 'react'
-import { StyledPrice } from './styles'
-import { PropTypes } from 'prop-types'
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
-function Price({value}) {
-    return (
-        <StyledPrice>
-            {value}
-        </StyledPrice>
-    )
+import { formatMoney } from '../../../utils/commonFunctions';
+
+import { StyledPrice } from './styles';
+
+function Price({ value }) {
+  return <StyledPrice>${formatMoney(value)}</StyledPrice>;
 }
 
 Price.propTypes = {
-    value: PropTypes.number
-}
+  value: PropTypes.number,
+};
 
-export default Price
+export default Price;

@@ -4,10 +4,12 @@ import { PropTypes } from 'prop-types';
 import { StylesBanner, StyledOverlay } from './styles';
 
 function Banner({ bgImage, children }) {
-  return <StylesBanner background={bgImage}>
-    <StyledOverlay />
-    {children}
-  </StylesBanner>;
+  return (
+    <StylesBanner background={bgImage}>
+      <StyledOverlay />
+      {children}
+    </StylesBanner>
+  );
 }
 
 Banner.propTypes = {

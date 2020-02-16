@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { mainColors } from '../../constants';
 
 export const StyledImg = styled.div`
@@ -6,6 +7,6 @@ export const StyledImg = styled.div`
   text-align: center;
 
   img {
-    width: 120px;
+    width: ${props => props.size};
   }
 `;

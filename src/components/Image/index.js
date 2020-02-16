@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { StyledImg } from './styles';
 
-function Image({src, alt, name, onClick}) {
-    return (
-        <StyledImg>
-            <img src={src} alt={alt} name={name} onClick={onClick} />
-        </StyledImg>
-    )
+function Image({ src, alt, name, size, onClick }) {
+  return (
+    <StyledImg size={size}>
+      <img src={src} alt={alt} name={name} onClick={onClick} />
+    </StyledImg>
+  );
 }
 
 Image.propTypes = {
-    onClick: PropTypes.func,
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string,
-    name: PropTypes.string
+  alt: PropTypes.string,
+  name: PropTypes.string,
+  onClick: PropTypes.func,
+  size: PropTypes.string,
+  src: PropTypes.string.isRequired,
 };
 
 export default Image;

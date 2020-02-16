@@ -8,6 +8,7 @@ export default function MaleBanner() {
     return (
         <StyledFullBanner>
             <Banner bgImage={hombre5_1}>
+                <span>Nuevas coleccion de hombre </span>
             </Banner>
         </StyledFullBanner>
     )

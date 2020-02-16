@@ -1,21 +1,22 @@
-import React from 'react'
-import GridItem from './GridItem';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import GridItem from './GridItem';
 import { StyledGrid } from './styles';
 
-function Grid( { products }) {
-    return (
-        <StyledGrid>
-            {products && products.map((item, idx) => {
-                return <GridItem item={item} key={idx} />
-            })}
-        </StyledGrid>
-    )
+function Grid({ products }) {
+  return (
+    <StyledGrid>
+      {products &&
+        products.map((item, idx) => {
+          return <GridItem item={item} key={idx} />;
+        })}
+    </StyledGrid>
+  );
 }
 
 GridItem.propTypes = {
-    products: PropTypes.arrayOf(PropTypes.object)
-}
-
+  products: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default Grid;

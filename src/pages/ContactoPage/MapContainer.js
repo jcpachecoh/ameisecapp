@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledMap, mapStyles } from './styles'
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 
-function MapContainer({ google }) {
+function MapContainer( { google } ) {
     return (
         <StyledMap>
             <Map
