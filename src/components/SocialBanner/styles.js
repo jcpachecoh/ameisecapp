@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mainColors } from '../../constants';
 
 export const StyledSocialBanner = styled.div`
   display: flex;

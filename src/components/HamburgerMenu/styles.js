@@ -29,7 +29,6 @@ export const StylesMenuToogle = styled.div`
     }
   }
 
-
   li {
     text-decoration: none;
     color: ${mainColors.white};
@@ -117,6 +116,11 @@ export const StylesMenu = styled.ul`
   }
 
   a {
-    color: ${mainColors.white}
+    color: ${mainColors.white};
   }
+`;
+
+export const StyledShopCar = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

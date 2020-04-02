@@ -2,6 +2,7 @@ import { reduxActions } from '../constants';
 
 const initialState = {
   pageNumber: null,
+  showItemDetails: null,
   showMenu: true,
 };
 
@@ -17,7 +18,10 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         showMenu: payload,
       };
-
+    case reduxActions.SHOW_ITEM_DETAILS:
+      return {
+        showItemDetails: payload,
+      };
     default:
       return state;
   }

@@ -5,5 +5,7 @@ import { mainColors } from '../../constants';
 export const StyledDropdown = styled.select`
   border: 1px solid ${mainColors.black};
   margin: 10px 0;
-  padding: 12px;
+  padding: 16px;
+  text-indent: 5px;
+  height: calc(1.2em + 24px);
 `;

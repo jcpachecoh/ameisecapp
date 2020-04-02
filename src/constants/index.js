@@ -23,7 +23,10 @@ export const mainMenu = [
 
 export const reduxActions = {
   ADD_ITEM: 'ADD_ITEM',
-  DELETE_SHOP: 'DELETE_ITEM',
+  DELETE_ALL: 'DELETE_ALL',
+  DELETE_ITEM: 'DELETE_ITEM',
+  SHOW_ITEM_DETAILS: 'SHOW_ITEM_DETAILS',
+  SHOW_SHOPPING_CAR: 'SHOW_SHOP_CAR',
   UPDATE_PAGE_VIEW: 'UPDATE_PAGE_VIEW',
 };
 
@@ -32,5 +35,6 @@ export const mainColors = {
   brandColor: '#01A8E8',
   darkGray: '#B3B3B3',
   lightGray: '#F3F3F3',
+  red: '#e74c3c',
   white: '#ffffff',
 };

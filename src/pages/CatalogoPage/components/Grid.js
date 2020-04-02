@@ -15,7 +15,7 @@ function Grid({ products }) {
   );
 }
 
-GridItem.propTypes = {
+Grid.propTypes = {
   products: PropTypes.arrayOf(PropTypes.object),
 };
 

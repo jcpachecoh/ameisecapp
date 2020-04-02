@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Image from '../../../components/Image';
 import OverlayModal from '../../../components/OverlayModal';
+import { reduxActions } from '../../../constants';
 
 import { StyledGridItem } from './styles';
 import Price from './Price';
@@ -10,25 +12,41 @@ import ProductTitle from './ProductTitle';
 import GridItemDetails from './GridItemDetails';
 
 function GridItem({ item }) {
-  const [showOverlay, setshowOverlay] = useState(false);
-  const handleClickImage = () => {
-    setshowOverlay(!showOverlay);
+  const showOverlay = useSelector(state => state.app.showItemDetails);
+  const dispatch = useDispatch();
+  const [itemData, setItemData] = useState(item);
+
+  const handleSetItemData = useCallback(() => {
+    dispatch({ payload: itemData, type: reduxActions.SHOW_ITEM_DETAILS });
+  }, [dispatch, itemData]);
+
+  const onSelectSize = e => {
+    const sizeValue = e.target.value;
+    const articleData = { ...showOverlay, size: sizeValue };
+    setItemData(articleData);
   };
+
+  const handleCloseOverlay = useCallback(() => {
+    dispatch({ payload: null, type: reduxActions.SHOW_ITEM_DETAILS });
+  }, [dispatch]);
+
+  const handleAddItem = useCallback(() => {
+    dispatch({ payload: itemData, type: reduxActions.ADD_ITEM });
+  }, [itemData, dispatch]);
+
   return (
     <StyledGridItem>
-      <OverlayModal showOverlay={showOverlay}>
+      <OverlayModal showOverlay={showOverlay} animationDirection={'animatetop'}>
         <GridItemDetails
-          images={item.images}
-          name={item.name}
-          price={item.price}
-          inventory={item.inventory}
-          onClose={handleClickImage}
+          onSelectSize={onSelectSize}
+          onClose={handleCloseOverlay}
+          handleAddItem={handleAddItem}
         />
       </OverlayModal>
       <Image
         src={item.images[0].src}
         name={item.images.name}
-        onClick={handleClickImage}
+        onClick={handleSetItemData}
         size={'120px'}
       />
       <ProductTitle title={item.name} />

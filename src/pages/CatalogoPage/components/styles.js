@@ -30,9 +30,11 @@ export const StyledPrice = styled.span`
 `;
 
 export const StyledProductTitle = styled.span`
+  color: ${mainColors.black};
   font-size: 16px;
   font-weight: 800;
-  color: ${mainColors.black};
+  margin: 20px 0 0 0;
+  text-transform: capitalize;
 `;
 
 export const StyledDescription = styled.span`

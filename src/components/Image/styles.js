@@ -8,5 +8,6 @@ export const StyledImg = styled.div`
 
   img {
     width: ${props => props.size};
+    height: auto;
   }
 `;

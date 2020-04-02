@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React from 'react';
 
 import HomePage from '../../pages/HomePage';
@@ -10,13 +10,15 @@ import ContactoPage from '../../pages/ContactoPage';
 
 const App = () => {
   return (
-    <BrowserRouter basename={window.location.pathname || ''}>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/catalogo" component={CatalogoPage} />
-      <Route path="/hombre" component={MalePage} />
-      <Route path="/dama" component={FemalePage} />
-      <Route path="/dotaciones" component={DotacionesPage} />
-      <Route path="/contacto" component={ContactoPage} />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/catalogo" component={CatalogoPage} />
+        <Route path="/hombre" component={MalePage} />
+        <Route path="/dama" component={FemalePage} />
+        <Route path="/dotaciones" component={DotacionesPage} />
+        <Route path="/contacto" component={ContactoPage} />
+      </Switch>
     </BrowserRouter>
   );
 };

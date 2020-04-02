@@ -8,6 +8,7 @@ import { StyledImageSlider } from './styles';
 
 function ImageSlider({ images }) {
   const settings = {
+    arrows: false,
     dots: true,
     infinite: true,
     slidesToScroll: 1,

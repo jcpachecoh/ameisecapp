@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { StyledDropdown } from './styles';
 
-function Dropdown({ items }) {
+function Dropdown({ items, onSelectSize }) {
   return (
-    <StyledDropdown placeholder="Seleccione una talla">
+    <StyledDropdown onChange={onSelectSize}>
       <option value={'--'}>Seleccione una talla</option>
       {items.map((item, idx) => {
         return (
@@ -25,6 +25,7 @@ Dropdown.propTypes = {
       size: PropTypes.string,
     }),
   ),
+  onSelectSize: PropTypes.func,
 };
 
 export default Dropdown;

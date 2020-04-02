@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mainColors } from '../../constants';
 
 export const StylesInfoContacto = styled.div`
   display: flex;
@@ -11,13 +10,11 @@ export const StylesInfoContacto = styled.div`
   padding: 40px 0;
 `;
 
-
-
 export const StylesInfoContactoItem = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
   text-align: center;
-  margin: auto;
   > span {
     text-align: center;
     margin: 10px;
@@ -26,12 +23,18 @@ export const StylesInfoContactoItem = styled.div`
 `;
 
 export const StyledMap = styled.div`
-    width: '100%';
-    height: '100%';
+  width: '100%';
+  height: '100%';
 `;
 
-
 export const mapStyles = {
-    width: '100%',
-    height: '100%'
+  height: '100%',
+  position: 'relative',
+  width: '100%',
 };
+
+export const StylesContactoPage = styled.div`
+  width: 100vw;
+  height: 300px;
+  margin-bottom: 500px;
+`;
