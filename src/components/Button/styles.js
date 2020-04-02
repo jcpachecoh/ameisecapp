@@ -16,5 +16,5 @@ export const StyledButton = styled.button`
   border: ${props => (props.type === 'secondary' ? '1px solid #fff' : 'none')};
   border-radius: 12px;
   z-index: ${props => props.zIndex};
-  margin-top: 10px;
+  margin: 6px 12px;
 `;

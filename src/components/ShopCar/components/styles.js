@@ -45,7 +45,6 @@ export const StyledShopCarSummary = styled.div`
   border-top: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
-  padding: 12px;
   position: absolute;
   justify-content: space-between;
   right: 0;

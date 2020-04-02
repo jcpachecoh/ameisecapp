@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Image from '../../../components/Image';
 import OverlayModal from '../../../components/OverlayModal';
@@ -12,23 +12,24 @@ import ProductTitle from './ProductTitle';
 import GridItemDetails from './GridItemDetails';
 
 function GridItem({ item }) {
-  const showOverlay = useSelector(state => state.app.showItemDetails);
   const dispatch = useDispatch();
-  const [itemData, setItemData] = useState(item);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [itemData, setItemData] = useState(null);
 
-  const handleSetItemData = useCallback(() => {
-    dispatch({ payload: itemData, type: reduxActions.SHOW_ITEM_DETAILS });
-  }, [dispatch, itemData]);
+  const handleSetItemData = () => {
+    setItemData(item);
+    setShowOverlay(!showOverlay);
+  };
 
   const onSelectSize = e => {
     const sizeValue = e.target.value;
-    const articleData = { ...showOverlay, size: sizeValue };
+    const articleData = { ...itemData, size: sizeValue };
     setItemData(articleData);
   };
 
-  const handleCloseOverlay = useCallback(() => {
-    dispatch({ payload: null, type: reduxActions.SHOW_ITEM_DETAILS });
-  }, [dispatch]);
+  const handleCloseOverlay = () => {
+    setShowOverlay(!showOverlay);
+  };
 
   const handleAddItem = useCallback(() => {
     dispatch({ payload: itemData, type: reduxActions.ADD_ITEM });
@@ -38,6 +39,7 @@ function GridItem({ item }) {
     <StyledGridItem>
       <OverlayModal showOverlay={showOverlay} animationDirection={'animatetop'}>
         <GridItemDetails
+          itemData={itemData}
           onSelectSize={onSelectSize}
           onClose={handleCloseOverlay}
           handleAddItem={handleAddItem}
