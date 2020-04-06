@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mainColors } from '../../constants';
 
 export const StyledGridFeatures = styled.div`
   display: flex;
@@ -11,7 +10,6 @@ export const StyledGridFeatures = styled.div`
     width: 80px;
   }
 `;
-
 
 export const StyledGridFeatureItem = styled.div`
   display: grid;

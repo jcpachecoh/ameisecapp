@@ -6,6 +6,7 @@ export const StyledEmailPromotion = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${mainColors.lightGray};
+  color: ${mainColors.black};
   margin: auto;
   padding: 10px 16px;
   text-align: center;

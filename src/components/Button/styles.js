@@ -4,9 +4,9 @@ import { mainColors } from '../../constants';
 
 export const StyledButton = styled.button`
   background-color: ${props =>
-    props.type === 'secondary' ? mainColors.lightGray : mainColors.brandColor};
+    props.type === 'secondary' ? mainColors.black : mainColors.brandColor};
   border: none;
-  color: ${props => (props.type === 'secondary' ? mainColors.black : mainColors.white)};
+  color: ${mainColors.white};
   padding: ${props => (props.type === 'secondary' ? '16px' : '15px 16px')};
   text-align: center;
   text-decoration: none;

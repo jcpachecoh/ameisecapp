@@ -7,5 +7,4 @@ export const StyledDropdown = styled.select`
   margin: 10px 0;
   padding: 16px;
   text-indent: 5px;
-  height: calc(1.2em + 24px);
 `;
