@@ -32,7 +32,7 @@ export const reduxActions = {
 
 export const mainColors = {
   black: '#000000',
-  brandColor: '#01A8E8',
+  brandColor: '#262E41',
   darkGray: '#B3B3B3',
   lightGray: '#F3F3F3',
   red: '#e74c3c',

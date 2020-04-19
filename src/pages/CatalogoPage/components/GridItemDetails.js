@@ -23,7 +23,7 @@ function GridItemDetails({ itemData, onClose, onSelectSize, handleAddItem }) {
           {itemData.description && <Description value={itemData.description} />}
           <Price value={itemData.price} />
           <Dropdown items={itemData.inventory} onSelectSize={onSelectSize} />
-          <Button onClick={handleAddItem} value={'Agregar al carrito'} type={'secondary'} />
+          <Button onClick={handleAddItem} value={'Agregar al carrito'} />
         </StyledGridItemDetails>
       )}
     </>

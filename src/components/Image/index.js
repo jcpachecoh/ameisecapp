@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { StyledImg } from './styles';
 
-function Image({ src, alt, name, size, onClick }) {
+function Image({ src, alt, name, size, highLight, onClick }) {
   return (
-    <StyledImg size={size}>
+    <StyledImg size={size} highLight={highLight}>
       <img src={src} alt={alt} name={name} onClick={onClick} />
     </StyledImg>
   );
@@ -13,6 +13,7 @@ function Image({ src, alt, name, size, onClick }) {
 
 Image.propTypes = {
   alt: PropTypes.string,
+  highLight: PropTypes.bool,
   name: PropTypes.string,
   onClick: PropTypes.func,
   size: PropTypes.string,

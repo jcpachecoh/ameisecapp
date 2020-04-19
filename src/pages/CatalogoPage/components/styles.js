@@ -4,7 +4,7 @@ import { mainColors } from '../../../constants';
 
 export const StyledFullBanner = styled.div`
   display: flex;
-  height: 440px;
+  height: 900px;
   width: 100%;
   color: ${mainColors.white};
 `;
@@ -26,12 +26,12 @@ export const StyledGridItem = styled.div`
 export const StyledPrice = styled.span`
   font-size: 18px;
   letter-spacing: 1px;
-  color: ${mainColors.darkGray};
+  color: ${mainColors.brandColor};
 `;
 
 export const StyledProductTitle = styled.span`
-  color: ${mainColors.black};
-  font-size: 16px;
+  color: ${mainColors.brandColor};
+  font-size: 18px;
   font-weight: 800;
   margin: 20px 0 0 0;
   text-transform: capitalize;
@@ -45,9 +45,10 @@ export const StyledDescription = styled.span`
 export const StyledGridItemDetails = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 12px 16px;
+  padding: 32px 16px;
 
   i {
-    left: 250px;
+    left: calc(96% - 10px);
+    top: -15px;
   }
 `;

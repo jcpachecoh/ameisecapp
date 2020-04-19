@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { SnackbarProvider } from 'react-snackbar-alert';
 import React from 'react';
 
 import HomePage from '../../pages/HomePage';
@@ -10,16 +11,18 @@ import ContactoPage from '../../pages/ContactoPage';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/catalogo" component={CatalogoPage} />
-        <Route path="/hombre" component={MalePage} />
-        <Route path="/dama" component={FemalePage} />
-        <Route path="/dotaciones" component={DotacionesPage} />
-        <Route path="/contacto" component={ContactoPage} />
-      </Switch>
-    </BrowserRouter>
+    <SnackbarProvider position="bottom-left">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/catalogo" component={CatalogoPage} />
+          <Route path="/hombre" component={MalePage} />
+          <Route path="/dama" component={FemalePage} />
+          <Route path="/dotaciones" component={DotacionesPage} />
+          <Route path="/contacto" component={ContactoPage} />
+        </Switch>
+      </BrowserRouter>
+    </SnackbarProvider>
   );
 };
 

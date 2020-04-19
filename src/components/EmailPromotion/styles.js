@@ -8,18 +8,21 @@ export const StyledEmailPromotion = styled.div`
   background-color: ${mainColors.lightGray};
   color: ${mainColors.black};
   margin: auto;
-  padding: 10px 16px;
+  padding: 32px 16px;
   text-align: center;
-  height: 200px;
+  height: 100%;
   width: 100%;
 
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 
   h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;

@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
 import OverlayModal from '../OverlayModal';
@@ -10,7 +11,7 @@ import { reduxActions } from '../../constants';
 
 import { StyledShopCar } from './styles';
 
-function ShopCarIcon() {
+function ShopCarIcon({ isDesktop }) {
   const showOverlay = useSelector(state => state.app.showItemDetails);
   const displayShoppingCar = useSelector(state => state.shopCar.showShoppingCar);
   const articles = useSelector(state => state.shopCar.articles);
@@ -31,11 +32,14 @@ function ShopCarIcon() {
   };
 
   return (
-    <StyledShopCar>
+    <StyledShopCar isDesktop={isDesktop}>
       <Icon image={shoppingcar} size={'32px'} onClick={openShopcar} />
       {articlesLength > 0 && <Badge value={articlesLength} />}
       {articlesLength > 0 && (
-        <OverlayModal showOverlay={displayShoppingCar} animationDirection={'animateright'}>
+        <OverlayModal
+          showOverlay={displayShoppingCar}
+          animationDirection={'animateright'}
+          width={isDesktop ? '40%' : '90%'}>
           <ShopCar />
         </OverlayModal>
       )}
@@ -43,4 +47,7 @@ function ShopCarIcon() {
   );
 }
 
+ShopCarIcon.propTypes = {
+  isDesktop: PropTypes.bool,
+};
 export default ShopCarIcon;

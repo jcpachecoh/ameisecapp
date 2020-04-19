@@ -7,7 +7,6 @@ export const StylesBanner = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
-  z-index: 1;
   position: relative;
   display: flex;
   align-items: center;
@@ -20,7 +19,7 @@ export const StylesBanner = styled.div`
     font-size: 36px;
     color: ${mainColors.white};
     font-weight: 800;
-    z-index: 10;
+    z-index: 1;
   }
 `;
 
@@ -31,5 +30,4 @@ export const StyledOverlay = styled.div`
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 2;
 `;

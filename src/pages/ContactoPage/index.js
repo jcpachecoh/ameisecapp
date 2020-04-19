@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 
-import HamburgerMenu from '../../components/HamburgerMenu';
 import Footer from '../../components/Footer';
 
 import ContactoBanner from './ContactoBanner';
@@ -10,7 +9,6 @@ import MapContainer from './MapContainer';
 function ContactoPage() {
   return (
     <Fragment>
-      <HamburgerMenu />
       <ContactoBanner />
       <InfoContacto />
       <MapContainer />

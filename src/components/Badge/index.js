@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { isDesktop } from '../../utils';
+
 import { StyledBadge } from './styles';
 
 function Badge({ value }) {
-  return <StyledBadge>{value}</StyledBadge>;
+  const isDesktopDevice = isDesktop();
+  return <StyledBadge>{!isDesktopDevice && value}</StyledBadge>;
 }
 
 Badge.propTypes = {

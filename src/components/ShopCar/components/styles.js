@@ -19,6 +19,7 @@ export const StyledShopCarItem = styled.div`
 export const StyledArticleName = styled.div`
   font-weight: 800;
   font-size: 12px;
+  color: ${mainColors.brandColor};
 `;
 
 export const StyledArticlePrice = styled.div`

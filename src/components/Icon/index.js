@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 import { StyledIcon } from './styles';
 
 function Icon({ image, size, onClick }) {

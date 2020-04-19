@@ -1,17 +1,19 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { wrapComponent } from 'react-snackbar-alert';
 
 import Image from '../../../components/Image';
 import OverlayModal from '../../../components/OverlayModal';
 import { reduxActions } from '../../../constants';
+import { isDesktop } from '../../../utils';
 
 import { StyledGridItem } from './styles';
 import Price from './Price';
 import ProductTitle from './ProductTitle';
 import GridItemDetails from './GridItemDetails';
 
-function GridItem({ item }) {
+function GridItem({ item, createSnackbar }) {
   const dispatch = useDispatch();
   const [showOverlay, setShowOverlay] = useState(false);
   const [itemData, setItemData] = useState(null);
@@ -33,11 +35,23 @@ function GridItem({ item }) {
 
   const handleAddItem = useCallback(() => {
     dispatch({ payload: itemData, type: reduxActions.ADD_ITEM });
+    createSnackbar({
+      message: 'Articulo adicionado exitosamente',
+      theme: 'success',
+    });
+    // this.props.enqueueSnackbar('Articulo adicionado extisotamente');
   }, [itemData, dispatch]);
 
+  const isDesktopDevice = isDesktop();
+  const modalWidth = isDesktopDevice ? '50%' : '80%';
+  const modalTop = isDesktopDevice ? '0' : '70px';
   return (
     <StyledGridItem>
-      <OverlayModal showOverlay={showOverlay} animationDirection={'animatetop'}>
+      <OverlayModal
+        showOverlay={showOverlay}
+        animationDirection={'animatetop'}
+        width={modalWidth}
+        top={modalTop}>
         <GridItemDetails
           itemData={itemData}
           onSelectSize={onSelectSize}
@@ -49,7 +63,8 @@ function GridItem({ item }) {
         src={item.images[0].src}
         name={item.images.name}
         onClick={handleSetItemData}
-        size={'120px'}
+        size={isDesktopDevice ? '320px' : '120px'}
+        highLight
       />
       <ProductTitle title={item.name} />
       <Price value={item.price} />
@@ -58,6 +73,7 @@ function GridItem({ item }) {
 }
 
 GridItem.propTypes = {
+  createSnackbar: PropTypes.any,
   item: PropTypes.shape({
     description: PropTypes.string,
     gender: PropTypes.string,
@@ -78,4 +94,4 @@ GridItem.propTypes = {
     price: PropTypes.number,
   }),
 };
-export default GridItem;
+export default wrapComponent(GridItem);

@@ -19,7 +19,7 @@ function ImageSlider({ images }) {
     <StyledImageSlider>
       <Slider {...settings}>
         {images.map((item, idx) => {
-          return <Image src={item.src} alt={item.idx} size={'300px'} key={idx} />;
+          return <Image src={item.src} alt={item.idx} size={'100%'} key={idx} />;
         })}
       </Slider>
     </StyledImageSlider>
