@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { mainColors } from '../../constants';
 
-export const StyledBadge = styled.span`
+export const StyledBadge = styled.div`
   box-sizing: border-box;
   display: inline-block;
   background-color: ${mainColors.red};

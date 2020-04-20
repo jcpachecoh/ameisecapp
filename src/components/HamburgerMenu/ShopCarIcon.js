@@ -27,6 +27,9 @@ function ShopCarIcon({ isDesktop }) {
   }, [displayShoppingCar]);
 
   const openShopcar = () => {
+    if (articlesLength === 0) {
+      return;
+    }
     handleShowOverlay();
     handleShowShoppingCar();
   };
@@ -35,7 +38,7 @@ function ShopCarIcon({ isDesktop }) {
     <StyledShopCar isDesktop={isDesktop}>
       <Icon image={shoppingcar} size={'32px'} onClick={openShopcar} />
       {articlesLength > 0 && <Badge value={articlesLength} />}
-      {articlesLength > 0 && (
+      {articlesLength > 0 && displayShoppingCar && (
         <OverlayModal
           showOverlay={displayShoppingCar}
           animationDirection={'animateright'}

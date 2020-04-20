@@ -12,6 +12,7 @@ function ShopCarSummary({ hideShopCar }) {
   const total = articles.reduce((acc, cv) => {
     return acc + cv.price;
   }, 0);
+
   return (
     <StyledShopCarSummary>
       <ShopCarSummaryItem value={total} type={'SubTotal'} />

@@ -7,7 +7,7 @@ export const StyledButton = styled.button`
     props.type === 'secondary' ? mainColors.white : mainColors.brandColor};
   border: none;
   color: ${props => (props.type === 'secondary' ? mainColors.black : mainColors.white)};
-  padding: ${props => (props.type === 'secondary' ? '16px' : '15px 16px')};
+  padding: ${props => (props.isDesktopDevice ? '6px' : '12px')};
   text-align: center;
   text-decoration: none;
   display: inline-block;

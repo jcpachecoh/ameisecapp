@@ -6,4 +6,5 @@ export const StyledIcon = styled.i`
   height: ${props => props.size};
   border: none;
   position: relative;
+  cursor: ${props => (props.onClick ? 'pointer' : 'arrow')};
 `;

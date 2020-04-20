@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { formatMoney } from '../../../utils/commonFunctions';
+import { isDesktop } from '../../../utils';
 
 import { StyledShopCarSummaryItem } from './styles';
 
 function ShopCarSummaryItem({ value, type }) {
+  const isDesktopDevice = isDesktop();
   return (
-    <StyledShopCarSummaryItem>
+    <StyledShopCarSummaryItem isDesktopDevice={isDesktopDevice}>
       <div>{type}:</div>
       <b>{formatMoney(value)}</b>
     </StyledShopCarSummaryItem>

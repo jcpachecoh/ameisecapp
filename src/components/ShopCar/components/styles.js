@@ -20,6 +20,10 @@ export const StyledArticleName = styled.div`
   font-weight: 800;
   font-size: 12px;
   color: ${mainColors.brandColor};
+
+  div:first-child {
+    height: 20px;
+  }
 `;
 
 export const StyledArticlePrice = styled.div`
@@ -58,7 +62,7 @@ export const StyledShopCarSummaryItem = styled.div`
   justify-content: space-between;
   font-size: 14px;
   color: ${mainColors.black};
-  padding: 12px;
+  padding: ${props => (props.isDesktopDevice ? '0 12px' : '12px')};
   text-align: end;
   background-color: ${mainColors.lightGray};
 `;
