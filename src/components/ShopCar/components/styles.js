@@ -51,10 +51,14 @@ export const StyledShopCarSummary = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  justify-content: space-between;
+  justify-content: flex-end;
   right: 0;
   bottom: 80px;
   width: 100%;
+
+  > button {
+    align-self: center;
+  }
 `;
 
 export const StyledShopCarSummaryItem = styled.div`

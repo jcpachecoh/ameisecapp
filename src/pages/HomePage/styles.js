@@ -10,6 +10,7 @@ export const StylesContainer = styled.div`
   font-size: 12px;
   width: 80%;
   padding: 210px 0;
+  align-items: center;
 
   > span {
     text-align: center;

@@ -17,7 +17,7 @@ export default function DotacionesBanner() {
     <StylesFullBanner>
       <Banner bgImage={lana}>
         <span>!Dotaciones Para Trabajo en frio!</span>
-        <Button onClick={handleClick} value="Saber mas" zIndex={0} />
+        <Button onClick={handleClick} value="Saber mas" zIndex={0} width={'50%'} />
       </Banner>
     </StylesFullBanner>
   );

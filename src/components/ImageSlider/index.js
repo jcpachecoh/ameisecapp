@@ -15,6 +15,7 @@ function ImageSlider({ images }) {
     slidesToShow: 1,
     speed: 500,
   };
+
   return (
     <StyledImageSlider>
       <Slider {...settings}>

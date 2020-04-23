@@ -13,11 +13,13 @@
   },
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.4.1",
     "google-maps-react": "^2.0.2",
     "minimist": "^1.2.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-animate-on-scroll": "^2.1.5",
     "react-awesome-slider": "^2.3.0",
     "react-dom": "^16.8.6",
     "react-page-scroller": "^2.0.2-beta",

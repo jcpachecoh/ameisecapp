@@ -17,4 +17,6 @@ export const StyledButton = styled.button`
   border-radius: 12px;
   z-index: ${props => props.zIndex};
   margin: 6px 12px;
+  width: ${props => (props.width ? props.width : '100%')};
+  outline: none;
 `;

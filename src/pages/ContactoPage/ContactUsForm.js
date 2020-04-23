@@ -11,7 +11,7 @@ export default function ContactUsForm() {
       <label>Email</label>
       <InputText placeholder={'tucorreo@email.com'} />
       <TextArea
-        placeholder={'Envianos tus inquitudes con gusto las responderemos'}
+        placeholder={'Envianos tus inquietudes con gusto las responderemos'}
         label={'Mensaje'}
       />
     </StyledContactUsForm>

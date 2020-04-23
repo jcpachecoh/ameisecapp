@@ -5,6 +5,7 @@ export const StyledGridFeatures = styled.div`
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 50px;
+  padding: ${props => (props.isDesktopDevice ? '0 64px' : '0')};
 
   > i {
     width: 80px;
@@ -14,12 +15,13 @@ export const StyledGridFeatures = styled.div`
 export const StyledGridFeatureItem = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px 40px;
+  padding: 40px 40px;
+  margin: 20px 0;
   justify-items: center;
   align-items: center;
 
   span {
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
   }
 `;

@@ -4,13 +4,18 @@ import hombre2_1 from '../../public/assets/photos/hombre2_1.jpg';
 import hombre2_2 from '../../public/assets/photos/hombre2_2.jpg';
 import hombre3_1 from '../../public/assets/photos/hombre3_1.jpg';
 import hombre3_2 from '../../public/assets/photos/hombre3_2.jpg';
-
 import dama1_1 from '../../public/assets/photos/dama1_1.jpg';
 import dama1_2 from '../../public/assets/photos/dama1_2.jpg';
 import dama2_1 from '../../public/assets/photos/dama2_1.jpg';
 import dama2_2 from '../../public/assets/photos/dama2_2.jpg';
 import dama3_1 from '../../public/assets/photos/dama3_1.jpg';
 import dama3_2 from '../../public/assets/photos/dama3_2.jpg';
+
+export const sliderPictures = [
+  { name: 'image 1', src: hombre1_1 },
+  { name: 'image 2', src: dama1_1 },
+  { name: 'image 3', src: hombre3_1 },
+];
 
 export const productsMale = [
   {
@@ -58,16 +63,16 @@ export const productsMale = [
         quantity: 20,
       },
       {
+        quantity: 20,
         size: 'M',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'L',
-        quantity: 20,
       },
       {
-        size: 'XL',
         quantity: 20,
+        size: 'XL',
       },
     ],
   },

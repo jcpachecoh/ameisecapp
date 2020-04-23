@@ -18,8 +18,13 @@ function ShopCarSummary({ hideShopCar }) {
       <ShopCarSummaryItem value={total} type={'SubTotal'} />
       <ShopCarSummaryItem value={0} type={'Envio'} />
       <ShopCarSummaryItem value={total} type={'Total'} />
-      <Button value={'Proceder Pago'} />
-      <Button value={'Continuar Comprando'} type={'secondary'} onClick={hideShopCar} />
+      <Button value={'Proceder Pago'} width={'70%'} />
+      <Button
+        value={'Continuar Comprando'}
+        type={'secondary'}
+        onClick={hideShopCar}
+        width={'70%'}
+      />
     </StyledShopCarSummary>
   );
 }

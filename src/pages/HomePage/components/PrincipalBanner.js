@@ -12,7 +12,11 @@ export default function PrincipalBanner() {
     <StylesFullBanner>
       <Banner bgImage={hombre4_1}>
         <HamburgerMenu />
-        <MainBanner message={'!Nueva Coleccion de hombre!'} redirect={'/hombre'} />
+        <MainBanner
+          message={'!Nueva Coleccion de hombre!'}
+          redirect={'/hombre'}
+          buttonLabel={'Descubrela'}
+        />
       </Banner>
     </StylesFullBanner>
   );

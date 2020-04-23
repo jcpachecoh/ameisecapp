@@ -28,9 +28,15 @@ export default function EmailPromotion() {
           placeholder={messages.email}
           value={email}
           onChange={handleEmail}
-          width={'540px'}
+          width={'200px'}
         />
-        <Button onClick={handleSubmit} value={messages.submit} type={'secondary'} zIndex={0} />
+        <Button
+          onClick={handleSubmit}
+          value={messages.submit}
+          type={'secondary'}
+          zIndex={0}
+          width={'30%'}
+        />
       </div>
     </StyledEmailPromotion>
   );

@@ -13,14 +13,14 @@ export default function FooterGrid() {
       <StyledFooterGridItem>
         <h3>Colecciones</h3>
         <Link to={'/hombre'}>Hombre</Link>
-        <Link to={'/mujer'}>Mujer</Link>
+        <Link to={'/dama'}>Mujer</Link>
         <Link to={'/dotaciones'}>Dotaciones</Link>
       </StyledFooterGridItem>
       <StyledFooterGridItem>
         <h3>Servicio</h3>
         <Link to={'/ordenes'}>Tus Ordernes</Link>
         <Link to={'/faq'}>Preguntas Frecuentes</Link>
-        <Link to={'/contactanos'}>Contactanos</Link>
+        <Link to={'/contacto'}>Contactanos</Link>
       </StyledFooterGridItem>
       {isDesktopDevice && (
         <StyledFooterGridItem>

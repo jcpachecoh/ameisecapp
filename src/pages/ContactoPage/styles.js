@@ -61,4 +61,10 @@ export const StylesInfoContacto = styled.div`
   padding: 0 32px;
   align-items: center;
   margin: 70px 20px;
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
