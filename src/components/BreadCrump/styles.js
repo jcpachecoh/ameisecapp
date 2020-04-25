@@ -5,8 +5,13 @@ import { mainColors } from '../../constants';
 export const StyledBreadcrump = styled.ul`
   margin: 0;
   padding: 0;
-  padding: ${props => (props.isDesktopDevice ? '32px 64px' : '32px 16px')};
+  padding: 32px 64px;
   list-style: none;
+
+  @media screen and (max-width: 600px) {
+    padding: 32px 16px 0 16px;
+    font-size: 16px;
+  }
 
   li {
     display: inline;

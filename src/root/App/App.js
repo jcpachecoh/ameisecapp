@@ -10,6 +10,7 @@ import FemalePage from '../../pages/FemalePage';
 import DotacionesPage from '../../pages/DotacionesPage';
 import ContactoPage from '../../pages/ContactoPage';
 import NoMatchPage from '../../pages/NoMatchPage';
+import ProductPage from '../../pages/ProductPage';
 
 import { StyledBody } from './styles';
 
@@ -19,6 +20,7 @@ const App = () => {
   const articlesLength = articles && articles.length;
 
   const shouldBeFixed = displayShoppingCar && articlesLength > 0;
+
   return (
     <StyledBody shouldBeFixed={shouldBeFixed}>
       <SnackbarProvider position="bottom-left">
@@ -30,6 +32,7 @@ const App = () => {
             <Route path="/dama" component={FemalePage} />
             <Route path="/dotaciones" component={DotacionesPage} />
             <Route path="/contacto" component={ContactoPage} />
+            <Route path="/producto/:category/:id" component={ProductPage} />
             <Route path={'*'} component={NoMatchPage} />
           </Switch>
         </BrowserRouter>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { productsMale } from '../../utils';
+import { productsMale } from '../../api/products';
 import Footer from '../../components/Footer';
 import Grid from '../CatalogoPage/components/Grid';
 import Title from '../../components/Title';

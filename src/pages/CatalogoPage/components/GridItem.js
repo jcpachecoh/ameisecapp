@@ -1,64 +1,23 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { wrapComponent } from 'react-snackbar-alert';
+import { withRouter, useHistory } from 'react-router-dom';
 
 import Image from '../../../components/Image';
-import OverlayModal from '../../../components/OverlayModal';
-import { reduxActions } from '../../../constants';
 import { isDesktop } from '../../../utils';
 
 import { StyledGridItem } from './styles';
 import Price from './Price';
 import ProductTitle from './ProductTitle';
-import GridItemDetails from './GridItemDetails';
 
-function GridItem({ item, createSnackbar }) {
-  const dispatch = useDispatch();
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [itemData, setItemData] = useState(null);
-
+function GridItem({ item }) {
+  let history = useHistory();
   const handleSetItemData = () => {
-    setItemData(item);
-    setShowOverlay(!showOverlay);
+    history.push('/producto/' + item.gender + '/' + item.id);
   };
-
-  const onSelectSize = e => {
-    const sizeValue = e.target.value;
-    const articleData = { ...itemData, size: sizeValue };
-    setItemData(articleData);
-  };
-
-  const handleCloseOverlay = () => {
-    setShowOverlay(!showOverlay);
-  };
-
-  const handleAddItem = useCallback(() => {
-    dispatch({ payload: itemData, type: reduxActions.ADD_ITEM });
-    createSnackbar({
-      message: 'Articulo adicionado exitosamente',
-      theme: 'success',
-    });
-    // this.props.enqueueSnackbar('Articulo adicionado extisotamente');
-  }, [itemData, dispatch]);
 
   const isDesktopDevice = isDesktop();
-  const modalWidth = isDesktopDevice ? '50%' : '80%';
-  const modalTop = isDesktopDevice ? '0' : '70px';
   return (
     <StyledGridItem>
-      <OverlayModal
-        showOverlay={showOverlay}
-        animationDirection={'animatetop'}
-        width={modalWidth}
-        top={modalTop}>
-        <GridItemDetails
-          itemData={itemData}
-          onSelectSize={onSelectSize}
-          onClose={handleCloseOverlay}
-          handleAddItem={handleAddItem}
-        />
-      </OverlayModal>
       <Image
         src={item.images[0].src}
         name={item.images.name}
@@ -94,4 +53,4 @@ GridItem.propTypes = {
     price: PropTypes.number,
   }),
 };
-export default wrapComponent(GridItem);
+export default withRouter(GridItem);

@@ -5,7 +5,7 @@ import { mainColors } from '../../constants';
 export const StylesMenuToogle = styled.div`
   align-items: center;
   background-color: ${mainColors.brandColor};
-  position: fixed;
+  position: relative;
   display: flex;
   top: 0;
   left: 0;
@@ -101,6 +101,8 @@ export const StyledNav = styled.nav`
   text-align: center;
   top: 0;
   z-index: 100;
+  background-color: ${mainColors.brandColor};
+  height: 120px;
 
   div.logo {
     float: left;

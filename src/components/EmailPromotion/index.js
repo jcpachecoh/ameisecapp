@@ -4,6 +4,7 @@ import { messages } from '../../constants/messages';
 import InputText from '../InputText';
 import Button from '../Button';
 import Title from '../Title';
+import { isDesktop } from '../../utils';
 
 import { StyledEmailPromotion } from './styles';
 
@@ -18,6 +19,7 @@ export default function EmailPromotion() {
     console.log('email', email);
   };
 
+  const isDesktopDevice = isDesktop();
   return (
     <StyledEmailPromotion>
       <Title value={messages.emailPromotion} />
@@ -28,15 +30,9 @@ export default function EmailPromotion() {
           placeholder={messages.email}
           value={email}
           onChange={handleEmail}
-          width={'200px'}
+          width={isDesktopDevice ? '520px' : '200px'}
         />
-        <Button
-          onClick={handleSubmit}
-          value={messages.submit}
-          type={'secondary'}
-          zIndex={0}
-          width={'30%'}
-        />
+        <Button onClick={handleSubmit} value={messages.submit} zIndex={0} width={'30%'} />
       </div>
     </StyledEmailPromotion>
   );

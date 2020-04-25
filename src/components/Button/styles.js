@@ -19,4 +19,5 @@ export const StyledButton = styled.button`
   margin: 6px 12px;
   width: ${props => (props.width ? props.width : '100%')};
   outline: none;
+  align-self: center;
 `;

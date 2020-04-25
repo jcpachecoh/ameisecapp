@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import Footer from '../../components/Footer';
 import Grid from '../CatalogoPage/components/Grid';
-import { productsFemale } from '../../utils';
+import { productsFemale } from '../../api/products';
 
 import DotacionesBanner from './DotacionesBanner';
 
