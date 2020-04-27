@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 
 import { StyledArticleName } from './styles';
 
-function ArticleName({ name, size }) {
+function ArticleName({ color, name, size }) {
   return (
     <StyledArticleName>
       <div>{name}</div>
-      <div>Talla: {size}</div>
+      {size && <div>Talla: {size}</div>}
+      {color && <div>Color: {color}</div>}
     </StyledArticleName>
   );
 }
 
 ArticleName.propTypes = {
+  color: PropTypes.string,
   name: PropTypes.string,
   size: PropTypes.string,
 };

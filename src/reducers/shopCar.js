@@ -15,12 +15,23 @@ const shopCar = (state = initialState, action) => {
     case reduxActions.ADD_ITEM:
       return {
         ...state,
-        articles: [...state.articles, { ...action.payload, id: state.articles.length }],
+        articles: [
+          ...state.articles,
+          {
+            ...action.payload,
+            id: state.articles.length,
+          },
+        ],
       };
     case reduxActions.DELETE_ITEM:
       return {
         ...state,
         articles: state.articles.filter(item => item.id !== action.payload),
+      };
+    case reduxActions.UPDATE_QUANTITY:
+      return {
+        ...state,
+        articles: action.payload,
       };
     case reduxActions.DELETE_ALL:
       return initialState;

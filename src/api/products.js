@@ -19,6 +19,16 @@ export const sliderPictures = [
 
 export const productsMale = [
   {
+    colors: [
+      {
+        color: 'Rojo',
+        colorHexa: '#F2B49C',
+      },
+      {
+        color: 'Verde',
+        colorHexa: '#000',
+      },
+    ],
     description: 'Saco Abierto Hombre para toda ocasión',
     gender: 'hombre',
     id: 1,

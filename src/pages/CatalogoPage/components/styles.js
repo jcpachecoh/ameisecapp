@@ -24,9 +24,15 @@ export const StyledGridItem = styled.div`
 `;
 
 export const StyledPrice = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: ${mainColors.brandColor};
+
+  .iva {
+    padding-left: 10px;
+    color: ${mainColors.darkGray};
+    font-size: 14px;
+  }
 `;
 
 export const StyledProductTitle = styled.span`
@@ -35,7 +41,7 @@ export const StyledProductTitle = styled.span`
   font-weight: 800;
   margin: 20px 0 0 0;
   text-transform: capitalize;
-  text-align: center;
+  text-align: ${props => (props.textAlign ? props.textAlign : 'center')};
 
   @media only screen and (max-width: 600px) {
     font-size: 18px;

@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import { mainColors } from '../../../constants';
 
 export const StyledShopCar = styled.div`
+  padding: 32px 64px;
   width: 100%;
-  height: 100vh;
+
+  @media screen and (max-width: 600px) {
+    padding: 32px 16px;
+  }
 `;
 
 export const StyledShopCarItem = styled.div`
@@ -14,6 +18,12 @@ export const StyledShopCarItem = styled.div`
   justify-content: space-between;
   height: 70px;
   padding: 12px;
+
+  input {
+    padding-left: 10px;
+    width: 40px;
+    border: 1px solid black;
+  }
 `;
 
 export const StyledArticleName = styled.div`
@@ -44,17 +54,22 @@ export const StyledItemsContainer = styled.div`
   width: 100%;
   height: 350px;
   overflow: scroll;
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 export const StyledShopCarSummary = styled.div`
   border-top: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
-  position: absolute;
   justify-content: flex-end;
   right: 0;
   bottom: 80px;
   width: 100%;
+  align-items: flex-end;
+  background-color: ${mainColors.lightGray};
+  padding: 16px 0;
 
   > button {
     align-self: center;
@@ -68,5 +83,19 @@ export const StyledShopCarSummaryItem = styled.div`
   color: ${mainColors.black};
   padding: ${props => (props.isDesktopDevice ? '0 12px' : '12px')};
   text-align: end;
-  background-color: ${mainColors.lightGray};
+  height: 50px;
+
+  width: 300px;
+`;
+
+export const StyledQuantity = styled.input`
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+`;
+
+export const StyledEmptyCar = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;

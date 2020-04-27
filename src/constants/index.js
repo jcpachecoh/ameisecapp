@@ -28,6 +28,7 @@ export const reduxActions = {
   SHOW_ITEM_DETAILS: 'SHOW_ITEM_DETAILS',
   SHOW_SHOPPING_CAR: 'SHOW_SHOP_CAR',
   UPDATE_PAGE_VIEW: 'UPDATE_PAGE_VIEW',
+  UPDATE_QUANTITY: 'UPDATE_QUANTITY',
 };
 
 export const mainColors = {

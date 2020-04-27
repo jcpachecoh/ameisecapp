@@ -16,16 +16,23 @@ import Breadcrump from '../../components/BreadCrump';
 import { reduxActions } from '../../constants';
 
 import { StyledProductContainer, StyledProductDescription, StyledSlider } from './styles';
+import ProductColors from './ProductColors';
 
 function ProductPage({ match, createSnackbar }) {
   const dispatch = useDispatch();
-  const [itemData, setItemData] = useState(null);
+
   const { id } = match?.params;
   const { category } = match?.params;
 
   const products = category == 'hombre' ? productsMale : productsFemale;
 
   const productDetails = products.find(item => item.id == id);
+  const [itemData, setItemData] = useState({
+    ...productDetails,
+    color: '',
+    priceUnt: productDetails.price,
+    size: '',
+  });
   const listBreadrump = [
     {
       active: true,
@@ -46,7 +53,17 @@ function ProductPage({ match, createSnackbar }) {
 
   const onSelectSize = e => {
     const sizeValue = e.target.value;
-    const articleData = { ...productDetails, size: sizeValue };
+    const articleData = {
+      ...itemData,
+      quantity: 1,
+      size: sizeValue,
+    };
+    setItemData(articleData);
+  };
+
+  const onSelectColor = e => {
+    const colorValue = e.target.getAttribute('data-color');
+    const articleData = { ...itemData, color: colorValue };
     setItemData(articleData);
   };
 
@@ -56,7 +73,6 @@ function ProductPage({ match, createSnackbar }) {
       message: 'Articulo adicionado exitosamente',
       theme: 'success',
     });
-    // this.props.enqueueSnackbar('Articulo adicionado extisotamente');
   }, [itemData, dispatch]);
 
   return (
@@ -69,9 +85,16 @@ function ProductPage({ match, createSnackbar }) {
             <ImageSlider images={productDetails.images} />
           </StyledSlider>
           <StyledProductDescription>
-            <ProductTitle title={productDetails.name} />
+            <ProductTitle title={productDetails.name} textAlign={'left'} />
             {productDetails.description && <Description value={productDetails.description} />}
-            <Price value={productDetails.price} />
+            {productDetails.colors && (
+              <ProductColors
+                colors={productDetails.colors}
+                onSelectColor={onSelectColor}
+                selected={itemData.color}
+              />
+            )}
+            <Price value={productDetails.price} showIva />
             <Dropdown items={productDetails.inventory} onSelectSize={onSelectSize} />
             <Button onClick={handleAddItem} value={'Agregar al carrito'} width="100%" />
           </StyledProductDescription>
