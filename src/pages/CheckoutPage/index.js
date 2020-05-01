@@ -23,7 +23,7 @@ function CheckoutPage() {
 
   return (
     <StyledCheckout>
-      <HamburgerMenu />
+      <HamburgerMenu colorBackground />
       <Breadcrump listBreadrump={listBreadrump} />
       <ShopCar />
       <Footer />

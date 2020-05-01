@@ -13,12 +13,11 @@ export default function FooterGrid() {
       <StyledFooterGridItem>
         <h3>Colecciones</h3>
         <Link to={'/hombre'}>Hombre</Link>
-        <Link to={'/dama'}>Mujer</Link>
         <Link to={'/dotaciones'}>Dotaciones</Link>
       </StyledFooterGridItem>
       <StyledFooterGridItem>
         <h3>Servicio</h3>
-        <Link to={'/ordenes'}>Tus Ordernes</Link>
+        <Link to={'/ordenes'}>Tus Ordenes</Link>
         <Link to={'/faq'}>Preguntas Frecuentes</Link>
         <Link to={'/contacto'}>Contactanos</Link>
       </StyledFooterGridItem>

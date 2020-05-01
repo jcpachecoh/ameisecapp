@@ -84,7 +84,6 @@ export const StyledShopCarSummaryItem = styled.div`
   padding: ${props => (props.isDesktopDevice ? '0 12px' : '12px')};
   text-align: end;
   height: 50px;
-
   width: 300px;
 `;
 
@@ -97,5 +96,24 @@ export const StyledQuantity = styled.input`
 export const StyledEmptyCar = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+`;
+
+export const StyledSignUpSelection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+`;
+
+export const StyledSignUpSelectionItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+`;
+
+export const StyledUserData = styled.div`
+  display: flex;
   flex-direction: column;
 `;

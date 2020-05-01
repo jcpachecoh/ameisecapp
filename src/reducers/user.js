@@ -1,6 +1,6 @@
 const initialState = {
   isLogged: false,
-  username: null,
+  userData: {},
 };
 
 const user = (state = initialState, action) => {
@@ -10,10 +10,10 @@ const user = (state = initialState, action) => {
         ...state,
         isLogged: action.value,
       };
-    case 'UPDATE_USERNAME':
+    case 'UPDATE_USER_DATA':
       return {
         ...state,
-        username: action.username,
+        userData: action.userData,
       };
     case 'LOGOUT':
       return initialState;

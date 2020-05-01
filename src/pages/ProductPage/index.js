@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { wrapComponent } from 'react-snackbar-alert';
 
-import { productsMale, productsFemale } from '../../api/products';
+import { products } from '../../api/products';
 import Footer from '../../components/Footer';
 import HamburgerMenu from '../../components/HamburgerMenu';
 import ImageSlider from '../../components/ImageSlider';
@@ -24,8 +24,6 @@ function ProductPage({ match, createSnackbar }) {
   const { id } = match?.params;
   const { category } = match?.params;
 
-  const products = category == 'hombre' ? productsMale : productsFemale;
-
   const productDetails = products.find(item => item.id == id);
   const [itemData, setItemData] = useState({
     ...productDetails,
@@ -41,8 +39,8 @@ function ProductPage({ match, createSnackbar }) {
     },
     {
       active: true,
-      label: 'Hombre',
-      link: '/hombre',
+      label: category,
+      link: `/${category}`,
     },
     {
       active: false,
@@ -73,11 +71,11 @@ function ProductPage({ match, createSnackbar }) {
       message: 'Articulo adicionado exitosamente',
       theme: 'success',
     });
-  }, [itemData, dispatch]);
+  }, [itemData, dispatch, createSnackbar]);
 
   return (
     <Fragment>
-      <HamburgerMenu />
+      <HamburgerMenu colorBackground />
       <Breadcrump listBreadrump={listBreadrump} />
       <StyledProductContainer>
         <>
@@ -100,7 +98,6 @@ function ProductPage({ match, createSnackbar }) {
           </StyledProductDescription>
         </>
       </StyledProductContainer>
-
       <Footer />
     </Fragment>
   );
@@ -109,7 +106,10 @@ function ProductPage({ match, createSnackbar }) {
 ProductPage.propTypes = {
   createSnackbar: PropTypes.any,
   match: PropTypes.shape({
-    params: PropTypes.shape({ category: PropTypes.string, id: PropTypes.string }),
+    params: PropTypes.shape({
+      category: PropTypes.string,
+      id: PropTypes.string,
+    }),
   }),
 };
 

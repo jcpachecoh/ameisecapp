@@ -4,21 +4,379 @@ import hombre2_1 from '../../public/assets/photos/hombre2_1.jpg';
 import hombre2_2 from '../../public/assets/photos/hombre2_2.jpg';
 import hombre3_1 from '../../public/assets/photos/hombre3_1.jpg';
 import hombre3_2 from '../../public/assets/photos/hombre3_2.jpg';
-import dama1_1 from '../../public/assets/photos/dama1_1.jpg';
-import dama1_2 from '../../public/assets/photos/dama1_2.jpg';
-import dama2_1 from '../../public/assets/photos/dama2_1.jpg';
-import dama2_2 from '../../public/assets/photos/dama2_2.jpg';
-import dama3_1 from '../../public/assets/photos/dama3_1.jpg';
-import dama3_2 from '../../public/assets/photos/dama3_2.jpg';
+/* dotaciones */
+import saco_cuello_v1 from '../../public/assets/photos/dotaciones/saco_cuello_v1.jpg';
+import saco_cuello_v2 from '../../public/assets/photos/dotaciones/saco_cuello_v2.jpg';
+import saco_cuello_v3 from '../../public/assets/photos/dotaciones/saco_cuello_v3.jpg';
+import saco_dotacion_abierto_1 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_1.jpg';
+import saco_dotacion_abierto_3 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_2.jpg';
+import saco_dotacion_abierto_2 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_3.jpg';
+import guantes_acrilico_1 from '../../public/assets/photos/dotaciones/guantes_acrilico_1.jpeg';
+import guantes_acrilico_2 from '../../public/assets/photos/dotaciones/guantes_acrilico_2.jpeg';
+import guantes_carnaza_1 from '../../public/assets/photos/dotaciones/guantes_carnaza_1.jpeg';
+import guantes_carnaza_2 from '../../public/assets/photos/dotaciones/guantes_carnaza_2.jpeg';
+import medias_lana from '../../public/assets/photos/dotaciones/medias_lana.jpeg';
+import pasamontanas_colores from '../../public/assets/photos/dotaciones/pasamontanas_colores.jpeg';
+import pasamontanas from '../../public/assets/photos/dotaciones/pasamontanas.jpeg';
 
-export const sliderPictures = [
-  { name: 'image 1', src: hombre1_1 },
-  { name: 'image 2', src: dama1_1 },
-  { name: 'image 3', src: hombre3_1 },
-];
-
-export const productsMale = [
+export const products = [
+  /*****Dotaciones*******/
   {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Saco Cuello V lana algodón 65% y poliéster 35% Unisex',
+    gender: 'unisex',
+    id: 1,
+    images: [
+      {
+        name: 'Saco Cuello V 1',
+        src: saco_cuello_v1,
+      },
+      {
+        name: 'Saco Cuello V 3',
+        src: saco_cuello_v2,
+      },
+      {
+        name: 'Saco Cuello V 3',
+        src: saco_cuello_v3,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Saco cuello V ',
+    price: 39500,
+  },
+  {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Saco Abierto acrilico 100% Unisex',
+    gender: 'unisex',
+    id: 2,
+    images: [
+      {
+        name: 'Saco Abierto V 1',
+        src: saco_dotacion_abierto_1,
+      },
+      {
+        name: 'Saco Abierto V 3',
+        src: saco_dotacion_abierto_2,
+      },
+      {
+        name: 'Saco Abierto V 3',
+        src: saco_dotacion_abierto_3,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Saco Abierto Unisex ',
+    price: 46500,
+  },
+  {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Guantes en lana acrilico 100% cuarto frio',
+    gender: 'unisex',
+    id: 3,
+    images: [
+      {
+        name: 'Guantes en lana acrilico v1',
+        src: guantes_acrilico_1,
+      },
+      {
+        name: 'uantes en lana acrilico v2',
+        src: guantes_acrilico_2,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Guantes para cuarto frio',
+    price: 10600,
+  },
+  {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Pasamontañas lana 100% acrilico cuarto frio',
+    gender: 'unisex',
+    id: 4,
+    images: [
+      {
+        name: 'Pasamontanas',
+        src: pasamontanas,
+      },
+      {
+        name: 'Pasamontanas colores',
+        src: pasamontanas_colores,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Pasamontañas cuarto frio',
+    price: 10600,
+  },
+  {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Guantes especial carnaza tela antifluydo guata cuarto frío',
+    gender: 'unisex',
+    id: 5,
+    images: [
+      {
+        name: 'Guantes en carnaza acrilico v1',
+        src: guantes_carnaza_1,
+      },
+      {
+        name: 'Guantes en carnaza acrilico v2',
+        src: guantes_carnaza_2,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Guantes Carnaza ',
+    price: 10600,
+  },
+  {
+    category: 'dotaciones',
+    colors: [
+      {
+        color: 'Negro',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Blanco',
+        colorHexa: '#fff',
+      },
+      {
+        color: 'Rojo',
+        colorHexa: '#FF4105',
+      },
+      {
+        color: 'Azul Rey',
+        colorHexa: '#000',
+      },
+      {
+        color: 'Amarillo',
+        colorHexa: '#ffdb00',
+      },
+    ],
+    description: 'Medias lana acrílico 100% cuartos fríos ',
+    gender: 'unisex',
+    id: 6,
+    images: [
+      {
+        name: 'Media Lana v1',
+        src: medias_lana,
+      },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'S',
+      },
+      {
+        quantity: 20,
+        size: 'M',
+      },
+      {
+        quantity: 20,
+        size: 'L',
+      },
+      {
+        quantity: 20,
+        size: 'XL',
+      },
+    ],
+    name: 'Medias Lana Cuarto frio ',
+    price: 12400,
+  },
+  /*************Dotaciones*******/
+  /*************Hombre**********/
+  {
+    category: 'hombre',
     colors: [
       {
         color: 'Rojo',
@@ -31,7 +389,7 @@ export const productsMale = [
     ],
     description: 'Saco Abierto Hombre para toda ocasión',
     gender: 'hombre',
-    id: 1,
+    id: 2,
     images: [
       { name: 'image 1', src: hombre1_1 },
       { name: 'image 2', src: hombre1_2 },
@@ -58,151 +416,75 @@ export const productsMale = [
     price: 56500,
   },
   {
+    category: 'hombre',
     description: 'saco rayas',
-    id: 2,
-    name: 'Saco rayas',
-    price: 56500,
     gender: 'hombre',
-    images: [
-      { src: hombre2_1, name: 'image 1' },
-      { src: hombre2_2, name: 'image 2' },
-    ],
-    inventory: [
-      {
-        size: 'S',
-        quantity: 20,
-      },
-      {
-        quantity: 20,
-        size: 'M',
-      },
-      {
-        quantity: 20,
-        size: 'L',
-      },
-      {
-        quantity: 20,
-        size: 'XL',
-      },
-    ],
-  },
-  {
     id: 3,
-    name: 'Chaqueta Cerrada',
-    price: 56500,
-    description: 'Chaqueta Cerrada',
-    gender: 'hombre',
     images: [
-      { src: hombre3_1, name: 'image 1' },
-      { src: hombre3_2, name: 'image 2' },
+      {
+        name: 'image 1',
+        src: hombre2_1,
+      },
+      {
+        name: 'image 2',
+        src: hombre2_2,
+      },
     ],
     inventory: [
       {
+        quantity: 20,
         size: 'S',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'M',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'L',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'XL',
-        quantity: 20,
       },
     ],
-  },
-];
-
-export const productsFemale = [
-  {
-    id: 40,
-    price: 56500,
-    name: 'Saco abierto',
-    description: 'saco abierto',
-    gender: 'dama',
-    images: [
-      { src: dama1_1, name: 'image 1' },
-      { src: dama1_2, name: 'image 2' },
-    ],
-    inventory: [
-      {
-        size: 'S',
-        quantity: 20,
-      },
-      {
-        size: 'M',
-        quantity: 20,
-      },
-      {
-        size: 'L',
-        quantity: 20,
-      },
-      {
-        size: 'XL',
-        quantity: 20,
-      },
-    ],
-  },
-  {
-    id: 41,
     name: 'Saco rayas',
     price: 56500,
-    description: 'saco rayas',
-    gender: 'dama',
-    images: [
-      { src: dama2_1, name: 'image 1' },
-      { src: dama2_2, name: 'image 2' },
-    ],
-    inventory: [
-      {
-        size: 'S',
-        quantity: 20,
-      },
-      {
-        size: 'M',
-        quantity: 20,
-      },
-      {
-        size: 'L',
-        quantity: 20,
-      },
-      {
-        size: 'XL',
-        quantity: 20,
-      },
-    ],
   },
   {
-    id: 42,
-    name: 'Chaqueta Cerrada',
-    price: 56500,
+    category: 'hombre',
     description: 'Chaqueta Cerrada',
-    gender: 'dama',
+    gender: 'hombre',
+    id: 4,
     images: [
-      { src: dama3_1, name: 'image 1' },
-      { src: dama3_2, name: 'image 2' },
+      {
+        name: 'image 1',
+        src: hombre3_1,
+      },
+      {
+        name: 'image 2',
+        src: hombre3_2,
+      },
     ],
     inventory: [
       {
+        quantity: 20,
         size: 'S',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'M',
-        quantity: 20,
       },
       {
+        quantity: 20,
         size: 'L',
-        quantity: 20,
       },
       {
-        size: 'XL',
         quantity: 20,
+        size: 'XL',
       },
     ],
+    name: 'Chaqueta Cerrada Acrilico 100%',
+    price: 56500,
   },
 ];

@@ -101,7 +101,7 @@ export const StyledNav = styled.nav`
   text-align: center;
   top: 0;
   z-index: 100;
-  background-color: ${mainColors.brandColor};
+  background-color: ${props => (props.colorBackground ? mainColors.brandColor : 'none')};
   height: 120px;
 
   div.logo {
@@ -118,7 +118,7 @@ export const StyledNav = styled.nav`
   }
 
   div.logo a:hover {
-    color: ${mainColors.brandColor};
+    color: ${props => (props.colorBackground ? '#f7f7f7' : mainColors.brandColor)};
   }
 
   div.main_list {
@@ -150,7 +150,7 @@ export const StyledNav = styled.nav`
   }
 
   div.main_list ul li a:hover {
-    color: ${mainColors.brandColor};
+    color: ${props => (props.colorBackground ? '#cccccc' : mainColors.brandColor)};
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -419,7 +419,7 @@ export const StylesMenu = styled.ul`
   padding: 50px;
   padding-top: 125px;
 
-  background: ${mainColors.brandColor};
+  /* background: ${mainColors.brandColor}; */
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */

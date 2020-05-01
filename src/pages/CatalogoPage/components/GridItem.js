@@ -12,7 +12,7 @@ import ProductTitle from './ProductTitle';
 function GridItem({ item }) {
   let history = useHistory();
   const handleSetItemData = () => {
-    history.push('/producto/' + item.gender + '/' + item.id);
+    history.push('/producto/' + item.category + '/' + item.id);
   };
 
   const isDesktopDevice = isDesktop();
@@ -34,6 +34,7 @@ function GridItem({ item }) {
 GridItem.propTypes = {
   createSnackbar: PropTypes.any,
   item: PropTypes.shape({
+    category: PropTypes.string,
     description: PropTypes.string,
     gender: PropTypes.string,
     id: PropTypes.number,

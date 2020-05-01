@@ -5,10 +5,11 @@ import { isDesktop } from '../../utils';
 
 import { StyledButton } from './styles';
 
-export function Button({ onClick, value, type, width, zIndex }) {
+export function Button({ disabled, onClick, value, type, width, zIndex }) {
   const isDesktopDevice = isDesktop();
   return (
     <StyledButton
+      disabled={disabled}
       onClick={onClick}
       type={type}
       zIndex={zIndex}
@@ -20,6 +21,7 @@ export function Button({ onClick, value, type, width, zIndex }) {
 }
 
 Button.propTypes = {
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
   type: PropTypes.string,
   value: PropTypes.string.isRequired,

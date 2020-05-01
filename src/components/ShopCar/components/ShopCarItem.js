@@ -43,7 +43,7 @@ function ShopCarItem({ item, idx, updateShopCar }) {
         <ArticleImage images={item.images} />
         <ArticleName name={item.name} size={item.size} color={item.color} />
         <ArticlePrice price={price} />
-        <Quantity value={quantity} onChangeValue={onChangeValue} />
+        {updateShopCar && <Quantity value={quantity} onChangeValue={onChangeValue} />}
         <Icon image={cancelIcon} size={'32px'} onClick={deleteItem} />
       </StyledShopCarItem>
       <hr />

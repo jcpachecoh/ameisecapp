@@ -16,6 +16,7 @@ export const StyledBreadcrump = styled.ul`
   li {
     display: inline;
     font-size: 18px;
+    text-transform: capitalize;
   }
 
   a {

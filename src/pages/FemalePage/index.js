@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-import { productsFemale } from '../../api/products';
 import Footer from '../../components/Footer';
 import Grid from '../CatalogoPage/components/Grid';
 import Breadcrump from '../../components/BreadCrump';
+import { products } from '../../api/products';
 
 import FemaleBanner from './FemaleBanner';
 
@@ -25,7 +25,7 @@ function FemalePage() {
     <Fragment>
       <FemaleBanner />
       <Breadcrump listBreadrump={listBreadrump} />
-      <Grid products={productsFemale} />
+      <Grid products={products} />
       <Footer />
     </Fragment>
   );

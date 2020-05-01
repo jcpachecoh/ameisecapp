@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
 import Image from '../Image/index.js';
 import logo from '../../../public/assets/logo.png';
@@ -9,12 +10,12 @@ import { mainMenu } from '../../constants/index.js';
 import ShopCarIcon from './ShopCarIcon.js';
 import { StylesMenuToogle, StylesMenu, StyledNav } from './styles.js';
 
-export default function HamburgerMenu() {
+export default function HamburgerMenu({ colorBackground }) {
   const isDesktopDevice = isDesktop();
   return (
     <>
       {isDesktopDevice ? (
-        <StyledNav>
+        <StyledNav colorBackground={colorBackground}>
           <div className="container">
             <div className="logo">
               <Link to={'/'}>
@@ -66,3 +67,7 @@ export default function HamburgerMenu() {
     </>
   );
 }
+
+HamburgerMenu.propTypes = {
+  colorBackground: PropTypes.string,
+};

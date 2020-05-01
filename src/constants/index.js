@@ -6,16 +6,11 @@ export const mainMenu = [
   },
   {
     key: 1,
-    label: 'Dama',
-    link: '/dama',
-  },
-  {
-    key: 2,
     label: 'Dotaciones',
     link: '/dotaciones',
   },
   {
-    key: 3,
+    key: 2,
     label: 'Contactanos',
     link: '/contacto',
   },

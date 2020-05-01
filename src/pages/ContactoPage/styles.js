@@ -37,7 +37,7 @@ export const mapStyles = {
 
 export const StylesContactoPage = styled.div`
   width: 100vw;
-  height: 280px;
+  height: 240px;
   margin-bottom: 500px;
 `;
 
