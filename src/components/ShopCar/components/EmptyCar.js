@@ -17,7 +17,7 @@ export default function EmptyCar() {
     <StyledEmptyCar>
       <Image src={emptyCar} size={'128px'} alt={'emptyCar'} />
       <Title value={'No tienes items en tu carrito de compra'} />
-      <Button value={'Ir al a compras'} onClick={goToHome} />
+      <Button value={'Ir a la pagina de inicio'} onClick={goToHome} />
     </StyledEmptyCar>
   );
 }

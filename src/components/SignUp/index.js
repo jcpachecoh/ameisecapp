@@ -20,6 +20,7 @@ function SignUp({ createSnackbar, backFn, showForm }) {
     firstName: null,
     lastName: null,
     password: null,
+    phone: null,
   };
 
   const initialErrors = {
@@ -30,6 +31,7 @@ function SignUp({ createSnackbar, backFn, showForm }) {
     firstName: null,
     lastName: null,
     password: null,
+    phone: null,
   };
 
   const [signUpForm, setSignUpForm] = useState(initialSignUpForm);
@@ -78,6 +80,12 @@ function SignUp({ createSnackbar, backFn, showForm }) {
       errorsFields = {
         ...errorsFields,
         password: 'Por favor ingrese su contraseña',
+      };
+    }
+    if (!signUpForm.phone) {
+      errorsFields = {
+        ...errorsFields,
+        phone: 'Por favor ingrese su telefono',
       };
     }
     if (!signUpForm.city) {
@@ -163,6 +171,14 @@ function SignUp({ createSnackbar, backFn, showForm }) {
             onChange={handleForm}
             name={'password'}
             errorLabel={errors.password}
+          />
+          <InputText
+            value={signUpForm.phone}
+            label={'Telefono'}
+            placeholder={'(3xx-xxxxxxxxx)'}
+            onChange={handleForm}
+            name={'phone'}
+            errorLabel={errors.phone}
           />
           <InputText
             value={signUpForm.city}

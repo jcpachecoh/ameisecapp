@@ -12,7 +12,7 @@ import ArticlePrice from './ArticlePrice';
 import ArticleImage from './ArticleImage';
 import Quantity from './Quantity';
 
-function ShopCarItem({ item, idx, updateShopCar }) {
+function ShopCarItem({ item, idx, showDelete, updateShopCar }) {
   const dispatch = useDispatch();
   const articles = useSelector(state => state.shopCar.articles);
   const [price, setPrice] = useState(item.price);
@@ -44,7 +44,7 @@ function ShopCarItem({ item, idx, updateShopCar }) {
         <ArticleName name={item.name} size={item.size} color={item.color} />
         <ArticlePrice price={price} />
         {updateShopCar && <Quantity value={quantity} onChangeValue={onChangeValue} />}
-        <Icon image={cancelIcon} size={'32px'} onClick={deleteItem} />
+        {showDelete && <Icon image={cancelIcon} size={'32px'} onClick={deleteItem} />}
       </StyledShopCarItem>
       <hr />
     </>
@@ -68,6 +68,7 @@ ShopCarItem.propTypes = {
     quantity: PropTypes.number,
     size: PropTypes.string,
   }),
+  showDelete: PropTypes.bool,
   updateShopCar: PropTypes.func,
 };
 

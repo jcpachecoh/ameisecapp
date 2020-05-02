@@ -6,8 +6,13 @@ export const StyledShopCar = styled.div`
   padding: 32px 64px;
   width: 100%;
 
+  button {
+    margin: 10px auto;
+    display: block;
+  }
+
   @media screen and (max-width: 600px) {
-    padding: 32px 16px;
+    padding: 32px 6px;
   }
 `;
 
@@ -104,6 +109,10 @@ export const StyledSignUpSelection = styled.div`
   flex-direction: row;
   align-items: center;
   margin: auto;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledSignUpSelectionItem = styled.div`
@@ -111,9 +120,34 @@ export const StyledSignUpSelectionItem = styled.div`
   flex-direction: column;
   width: 500px;
   margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    width: 340px;
+  }
 `;
 
-export const StyledUserData = styled.div`
-  display: flex;
-  flex-direction: column;
+export const StyledUserDataTable = styled.table`
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+
+  td,
+  th {
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+`;
+
+export const StyledMethodelector = styled.div`
+  margin: 0 auto;
+  width: 71%;
+`;
+
+export const StyledSummary = styled.div`
+  text-align: center;
 `;

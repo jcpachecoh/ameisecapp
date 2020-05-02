@@ -5,6 +5,7 @@ import Login from '../../Login';
 import SignUp from '../../SignUp';
 import Button from '../../Button';
 import Title from '../../Title';
+import { isDesktop } from '../../../utils';
 
 import { StyledSignUpSelection, StyledSignUpSelectionItem } from './styles';
 
@@ -14,9 +15,11 @@ function SignUpSelection({ backFn, moveToResume }) {
   const handleChangeForm = step => {
     setshowedItem(step);
   };
+
+  const isDesktopDevice = isDesktop();
   return (
     <>
-      <Button width={'10%'} value={'< Volver'} onClick={backFn} />
+      <Button width={isDesktopDevice ? '10%' : '30%'} value={'< Volver'} onClick={backFn} />
       <StyledSignUpSelection>
         <StyledSignUpSelectionItem>
           <Title value={'Bienvenido, logueate'} />

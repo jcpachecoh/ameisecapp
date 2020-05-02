@@ -178,7 +178,7 @@ export const products = [
         src: guantes_acrilico_1,
       },
       {
-        name: 'uantes en lana acrilico v2',
+        name: 'Guantes en lana acrilico v2',
         src: guantes_acrilico_2,
       },
     ],
@@ -389,7 +389,7 @@ export const products = [
     ],
     description: 'Saco Abierto Hombre para toda ocasión',
     gender: 'hombre',
-    id: 2,
+    id: 7,
     images: [
       { name: 'image 1', src: hombre1_1 },
       { name: 'image 2', src: hombre1_2 },
@@ -419,7 +419,7 @@ export const products = [
     category: 'hombre',
     description: 'saco rayas',
     gender: 'hombre',
-    id: 3,
+    id: 8,
     images: [
       {
         name: 'image 1',
@@ -455,7 +455,7 @@ export const products = [
     category: 'hombre',
     description: 'Chaqueta Cerrada',
     gender: 'hombre',
-    id: 4,
+    id: 9,
     images: [
       {
         name: 'image 1',

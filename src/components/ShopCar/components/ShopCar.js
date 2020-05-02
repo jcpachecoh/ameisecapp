@@ -10,12 +10,15 @@ import ShopCarSummary from './ShopCarSummary';
 import EmptyCar from './EmptyCar';
 import SignUpSelection from './SignUpSelection';
 import Resume from './Resume';
+import Summary from './Summary';
 
 function ShopCar() {
   const history = useHistory();
   const articles = useSelector(state => state.shopCar.articles, shallowEqual);
+  const isLogged = useSelector(state => state.user.isLogged);
 
   const [shopState, setshopState] = useState('initial');
+  const [orderData, setOrderData] = useState(null);
 
   const getTotal = items => {
     return items.reduce((acc, cv) => {
@@ -38,9 +41,17 @@ function ShopCar() {
   };
 
   const goToStep = step => {
-    setshopState(step);
+    if (step === 'signup' && isLogged) {
+      setshopState('resume');
+    } else {
+      setshopState(step);
+    }
   };
 
+  const goToSummary = orderData => {
+    setOrderData(orderData);
+    goToStep('summary');
+  };
   const handleShopCarState = () => {
     switch (shopState) {
       case 'initial':
@@ -53,7 +64,13 @@ function ShopCar() {
                 <StyledItemsContainer>
                   {articles.map((item, idx) => {
                     return (
-                      <ShopCarItem item={item} key={idx} idx={idx} updateShopCar={updateShopCar} />
+                      <ShopCarItem
+                        item={item}
+                        key={idx}
+                        idx={idx}
+                        updateShopCar={updateShopCar}
+                        showDelete
+                      />
                     );
                   })}
                 </StyledItemsContainer>
@@ -77,7 +94,16 @@ function ShopCar() {
           />
         );
       case 'resume':
-        return <Resume iva={iva} total={total} />;
+        return (
+          <Resume
+            iva={iva}
+            total={total}
+            backFn={() => goToStep('initial')}
+            goToSummary={goToSummary}
+          />
+        );
+      case 'summary':
+        return <Summary orderData={orderData} />;
       default:
         return null;
     }
