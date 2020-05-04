@@ -15,8 +15,8 @@ function InfoContacto() {
       <ContactUsForm />
       <StyledInfoDetails>
         <InfoContactoItem icon={location} text={'Calle 37 bis sur 68h-23'} />
-        <InfoContactoItem icon={telephone} text={'+57-1-7112232'} />
-        <InfoContactoItem icon={whatsapp} text={'+57-1-316-3611272'} />
+        <InfoContactoItem icon={telephone} text={'+57-1-7284120'} />
+        <InfoContactoItem icon={whatsapp} text={'+57-3104392240'} />
         <InfoContactoItem icon={mail} text={'contacto@rossyssweaters.com'} />
       </StyledInfoDetails>
     </StylesInfoContacto>

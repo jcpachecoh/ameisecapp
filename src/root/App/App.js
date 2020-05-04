@@ -12,6 +12,7 @@ import ContactoPage from '../../pages/ContactoPage';
 import NoMatchPage from '../../pages/NoMatchPage';
 import ProductPage from '../../pages/ProductPage';
 import CheckoutPage from '../../pages/CheckoutPage';
+import TerminosPage from '../../pages/TerminosPages';
 
 import { StyledBody } from './styles';
 
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/dotaciones" component={DotacionesPage} />
             <Route path="/contacto" component={ContactoPage} />
             <Route path="/checkout" component={CheckoutPage} />
+            <Route path="/terminos" component={TerminosPage} />
             <Route path="/producto/:category/:id" component={ProductPage} />
             <Route path={'*'} component={NoMatchPage} />
           </Switch>

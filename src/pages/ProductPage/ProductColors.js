@@ -6,9 +6,10 @@ import { StyledColors, StyledColor } from './styles';
 function ProductColors({ colors, onSelectColor, selected }) {
   return (
     <StyledColors>
-      {colors?.map(item => {
+      {colors?.map((item, idx) => {
         return (
           <StyledColor
+            key={idx}
             size={'32px'}
             name={item.color}
             colorHexa={item.colorHexa}

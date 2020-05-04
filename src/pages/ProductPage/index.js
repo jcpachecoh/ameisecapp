@@ -66,6 +66,21 @@ function ProductPage({ match, createSnackbar }) {
   };
 
   const handleAddItem = useCallback(() => {
+    const { color, size } = itemData;
+    if (!color) {
+      createSnackbar({
+        message: 'Por favor, seleccione un color para continuar',
+        theme: 'error',
+      });
+      return;
+    }
+    if (!size) {
+      createSnackbar({
+        message: 'Por favor, seleccione una talla para continuar',
+        theme: 'error',
+      });
+      return;
+    }
     dispatch({ payload: itemData, type: reduxActions.ADD_ITEM });
     createSnackbar({
       message: 'Articulo adicionado exitosamente',
@@ -86,11 +101,13 @@ function ProductPage({ match, createSnackbar }) {
             <ProductTitle title={productDetails.name} textAlign={'left'} />
             {productDetails.description && <Description value={productDetails.description} />}
             {productDetails.colors && (
-              <ProductColors
-                colors={productDetails.colors}
-                onSelectColor={onSelectColor}
-                selected={itemData.color}
-              />
+              <>
+                <ProductColors
+                  colors={productDetails.colors}
+                  onSelectColor={onSelectColor}
+                  selected={itemData.color}
+                />
+              </>
             )}
             <Price value={productDetails.price} showIva />
             <Dropdown items={productDetails.inventory} onSelectSize={onSelectSize} />

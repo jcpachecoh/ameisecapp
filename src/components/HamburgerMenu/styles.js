@@ -29,6 +29,9 @@ export const StylesMenuToogle = styled.div`
     }
   }
 
+  ul {
+    background-color: ${mainColors.brandColor};
+  }
   li {
     text-decoration: none;
     color: ${mainColors.white};

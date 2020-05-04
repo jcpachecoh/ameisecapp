@@ -4,6 +4,8 @@ import hombre2_1 from '../../public/assets/photos/hombre2_1.jpg';
 import hombre2_2 from '../../public/assets/photos/hombre2_2.jpg';
 import hombre3_1 from '../../public/assets/photos/hombre3_1.jpg';
 import hombre3_2 from '../../public/assets/photos/hombre3_2.jpg';
+import bufanda from '../../public/assets/photos/bufanda.jpeg';
+import bufanda_1 from '../../public/assets/photos/bufanda_1.jpeg';
 /* dotaciones */
 import saco_cuello_v1 from '../../public/assets/photos/dotaciones/saco_cuello_v1.jpg';
 import saco_cuello_v2 from '../../public/assets/photos/dotaciones/saco_cuello_v2.jpg';
@@ -11,6 +13,7 @@ import saco_cuello_v3 from '../../public/assets/photos/dotaciones/saco_cuello_v3
 import saco_dotacion_abierto_1 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_1.jpg';
 import saco_dotacion_abierto_3 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_2.jpg';
 import saco_dotacion_abierto_2 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_3.jpg';
+import saco_dotacion_abierto_4 from '../../public/assets/photos/dotaciones/saco_dotacion_abierto_4.jpeg';
 import guantes_acrilico_1 from '../../public/assets/photos/dotaciones/guantes_acrilico_1.jpeg';
 import guantes_acrilico_2 from '../../public/assets/photos/dotaciones/guantes_acrilico_2.jpeg';
 import guantes_carnaza_1 from '../../public/assets/photos/dotaciones/guantes_carnaza_1.jpeg';
@@ -80,7 +83,7 @@ export const products = [
         size: 'XL',
       },
     ],
-    name: 'Saco cuello V ',
+    name: 'Saco cuello V Unisex ',
     price: 39500,
   },
   {
@@ -112,16 +115,8 @@ export const products = [
     id: 2,
     images: [
       {
-        name: 'Saco Abierto V 1',
-        src: saco_dotacion_abierto_1,
-      },
-      {
-        name: 'Saco Abierto V 3',
-        src: saco_dotacion_abierto_2,
-      },
-      {
-        name: 'Saco Abierto V 3',
-        src: saco_dotacion_abierto_3,
+        name: 'Saco Abierto V 4',
+        src: saco_dotacion_abierto_4,
       },
     ],
     inventory: [
@@ -142,7 +137,7 @@ export const products = [
         size: 'XL',
       },
     ],
-    name: 'Saco Abierto Unisex ',
+    name: 'Saco Abierto Hombre ',
     price: 46500,
   },
   {
@@ -486,5 +481,29 @@ export const products = [
     ],
     name: 'Chaqueta Cerrada Acrilico 100%',
     price: 56500,
+  },
+  {
+    category: 'hombre',
+    colors: [
+      {
+        color: 'Gris',
+        colorHexa: '#888888',
+      },
+    ],
+    description: 'Bufanda estilo cachimir, lana acrilico 100%',
+    gender: 'hombre',
+    id: 10,
+    images: [
+      { name: 'Bufanda 1', src: bufanda },
+      { name: 'Bufanda 2', src: bufanda_1 },
+    ],
+    inventory: [
+      {
+        quantity: 20,
+        size: 'Unica',
+      },
+    ],
+    name: 'Bufanda en Puntada',
+    price: 45000,
   },
 ];

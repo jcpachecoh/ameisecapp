@@ -20,6 +20,7 @@ export default function FooterGrid() {
         <Link to={'/ordenes'}>Tus Ordenes</Link>
         <Link to={'/faq'}>Preguntas Frecuentes</Link>
         <Link to={'/contacto'}>Contactanos</Link>
+        <Link to={'/terminos'}>Terminos & condiciones</Link>
       </StyledFooterGridItem>
       {isDesktopDevice && (
         <StyledFooterGridItem>

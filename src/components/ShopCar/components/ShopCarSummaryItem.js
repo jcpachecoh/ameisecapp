@@ -18,7 +18,7 @@ function ShopCarSummaryItem({ value, type }) {
 
 ShopCarSummaryItem.propTypes = {
   type: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.number,
 };
 
 export default ShopCarSummaryItem;

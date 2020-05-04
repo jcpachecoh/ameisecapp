@@ -26,25 +26,29 @@ export const StyledGridItem = styled.div`
 export const StyledPrice = styled.span`
   font-size: 16px;
   letter-spacing: 1px;
-  color: ${mainColors.brandColor};
+  color: ${mainColors.darkGray};
+
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
 
   .iva {
     padding-left: 10px;
     color: ${mainColors.darkGray};
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 
 export const StyledProductTitle = styled.span`
   color: ${mainColors.brandColor};
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   margin: 20px 0 0 0;
   text-transform: capitalize;
   text-align: ${props => (props.textAlign ? props.textAlign : 'center')};
 
   @media only screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 

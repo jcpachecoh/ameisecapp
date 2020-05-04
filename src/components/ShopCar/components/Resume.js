@@ -70,6 +70,13 @@ function Resume({ backFn, createSnackbar, iva, total, goToSummary }) {
       });
   };
   const handleConfirm = () => {
+    if (!resumeData.paymentmethod) {
+      createSnackbar({
+        message: 'Por favor, seleccione un metodo de pago para continuar',
+        theme: 'error',
+      });
+      return;
+    }
     setLoading(true);
     httpClient
       .get('orders')

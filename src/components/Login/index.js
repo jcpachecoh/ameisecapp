@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { wrapComponent } from 'react-snackbar-alert';
 import { useDispatch } from 'react-redux';
 
+import loadingIcon from '../../../public/assets/loadingIcon.gif';
 import InputText from '../InputText';
 import Button from '../Button';
 import httpClient from '../../api/services/axios-client';
+import Image from '../Image';
 
 import { StyledLogin } from './styles';
 
@@ -17,7 +19,7 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
   };
 
   const [LoginForm, setLoginForm] = useState(initialLoginForm);
-  const [userData, setUserData] = useState({});
+  const [loading, setloading] = useState(false);
 
   const setLoginData = userExist => {
     dispatch({ type: 'UPDATE_USER_DATA', userData: userExist });
@@ -26,6 +28,7 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
   };
 
   const handleLogin = () => {
+    setloading(true);
     httpClient
       .get('users')
       .then(response => {
@@ -33,6 +36,7 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
           const userExist = response.data.find(
             item => item.email === LoginForm.email && item.password === LoginForm.password,
           );
+          setloading(false);
           if (userExist) {
             setLoginData(userExist);
           } else {
@@ -58,7 +62,9 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
   };
   return (
     <>
-      {showForm ? (
+      {loading ? (
+        <Image src={loadingIcon} size={'128px'} />
+      ) : showForm ? (
         <StyledLogin>
           <InputText
             value={LoginForm.email}

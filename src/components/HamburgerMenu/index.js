@@ -69,5 +69,5 @@ export default function HamburgerMenu({ colorBackground }) {
 }
 
 HamburgerMenu.propTypes = {
-  colorBackground: PropTypes.string,
+  colorBackground: PropTypes.bool,
 };
