@@ -26,13 +26,14 @@ function Resume({ backFn, createSnackbar, iva, total, goToSummary }) {
   const userData = useSelector(state => state.user.userData);
   const articleImportantData = articles.map(item => {
     const newObject = {};
-    const { color, quantity, size, name, id } = item;
+    const { color, quantity, size, name, id, ref } = item;
     return {
       ...newObject,
       color,
       id,
       name,
       quantity,
+      ref,
       size,
     };
   });

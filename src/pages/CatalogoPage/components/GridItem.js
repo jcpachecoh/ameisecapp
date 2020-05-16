@@ -25,7 +25,7 @@ function GridItem({ item }) {
         size={isDesktopDevice ? '320px' : '120px'}
         highLight
       />
-      <ProductTitle title={item.name} />
+      <ProductTitle title={item.nameGrid} />
       <Price value={item.price} />
     </StyledGridItem>
   );
@@ -51,6 +51,7 @@ GridItem.propTypes = {
       }),
     ),
     name: PropTypes.string,
+    nameGrid: PropTypes.string,
     price: PropTypes.number,
   }),
 };

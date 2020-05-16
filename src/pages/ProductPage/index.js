@@ -29,6 +29,7 @@ function ProductPage({ match, createSnackbar }) {
     ...productDetails,
     color: '',
     priceUnt: productDetails.price,
+    ref: productDetails.ref,
     size: '',
   });
   const listBreadrump = [

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import hombre4_1 from '../../../../public/assets/photos/hombre4_1.jpg';
+import hombre4_1 from '../../../../public/assets/products/hombre4_1.jpg';
 import Banner from '../../../components/Banner';
 import HamburgerMenu from '../../../components/HamburgerMenu';
 

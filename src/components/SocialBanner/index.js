@@ -1,24 +1,40 @@
 import React from 'react';
 
-import facebook from '../../../public/assets/facebook.png';
-import twitter from '../../../public/assets/twitter.png';
-import instagram from '../../../public/assets/instagram.png';
+import faaa from '../../../public/assets/faaa.png';
+import whatsapp_1 from '../../../public/assets/whatsapp_1.png';
+import instagram_1 from '../../../public/assets/instagram_1.png';
 import Icon from '../Icon';
 
 import { StyledSocialBanner, StyledTitle } from './styles';
 
 function SocialBanner() {
   const handleSocial = evt => {
-    console.log(evt);
+    const dataUrl = evt.currentTarget.getAttribute('data-url');
+    window.open(dataUrl, '_blank');
   };
 
   return (
     <>
       <StyledTitle>Siguenos</StyledTitle>
       <StyledSocialBanner>
-        <Icon image={facebook} size={'64px'} onClick={handleSocial} />
-        <Icon image={twitter} size={'64px'} onClick={handleSocial} />
-        <Icon image={instagram} size={'64px'} onClick={handleSocial} />
+        <Icon
+          image={faaa}
+          size={'64px'}
+          onClick={handleSocial}
+          dataUrl={'https://www.facebook.com/rossys.sweaters'}
+        />
+        <Icon
+          image={whatsapp_1}
+          size={'64px'}
+          onClick={handleSocial}
+          dataUrl={'https://api.whatsapp.com/send?phone=46731511575&text=mas%20informacion'}
+        />
+        <Icon
+          image={instagram_1}
+          size={'64px'}
+          onClick={handleSocial}
+          dataUrl={'https://api.whatsapp.com/send?phone=46731511575&text=mas%20informacion'}
+        />
       </StyledSocialBanner>
     </>
   );
