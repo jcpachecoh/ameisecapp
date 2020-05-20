@@ -27,13 +27,13 @@ function SocialBanner() {
           image={whatsapp_1}
           size={'64px'}
           onClick={handleSocial}
-          dataUrl={'https://api.whatsapp.com/send?phone=46731511575&text=mas%20informacion'}
+          dataUrl={'https://wa.me/573104392240'}
         />
         <Icon
           image={instagram_1}
           size={'64px'}
           onClick={handleSocial}
-          dataUrl={'https://api.whatsapp.com/send?phone=46731511575&text=mas%20informacion'}
+          dataUrl={'https://instagram.com/dpachecolosal?igshid=18b12w4esynlh'}
         />
       </StyledSocialBanner>
     </>

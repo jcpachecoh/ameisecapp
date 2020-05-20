@@ -58,7 +58,6 @@ export const StylesInfoContacto = styled.div`
   display: grid;
   grid-gap: 100px;
   grid-template-columns: 60% 40%;
-  padding: 0 32px;
   align-items: center;
   margin: 70px 20px;
 
