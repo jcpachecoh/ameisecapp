@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
@@ -13,7 +13,7 @@ import { StylesMenuToogle, StylesMenu, StyledNav } from './styles.js';
 export default function HamburgerMenu({ colorBackground }) {
   const isDesktopDevice = isDesktop();
   return (
-    <>
+    <Fragment>
       {isDesktopDevice ? (
         <StyledNav colorBackground={colorBackground}>
           <div className="container">
@@ -64,7 +64,7 @@ export default function HamburgerMenu({ colorBackground }) {
           <ShopCarIcon isDesktop={isDesktopDevice} />
         </StylesMenuToogle>
       )}
-    </>
+    </Fragment>
   );
 }
 

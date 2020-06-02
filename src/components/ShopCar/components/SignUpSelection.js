@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { PropTypes } from 'prop-types';
 
 import Login from '../../Login';
@@ -18,7 +18,7 @@ function SignUpSelection({ backFn, moveToResume }) {
 
   const isDesktopDevice = isDesktop();
   return (
-    <>
+    <Fragment>
       <Button width={isDesktopDevice ? '10%' : '30%'} value={'< Volver'} onClick={backFn} />
       <StyledSignUpSelection>
         <StyledSignUpSelectionItem>
@@ -34,7 +34,7 @@ function SignUpSelection({ backFn, moveToResume }) {
           <SignUp showForm={showedItem === 'signup'} backFn={() => handleChangeForm('signup')} />
         </StyledSignUpSelectionItem>
       </StyledSignUpSelection>
-    </>
+    </Fragment>
   );
 }
 

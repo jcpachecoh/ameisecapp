@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { wrapComponent } from 'react-snackbar-alert';
 import { useDispatch } from 'react-redux';
@@ -39,6 +39,8 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
           setloading(false);
           if (userExist) {
             setLoginData(userExist);
+            localStorage.setItem('user', JSON.stringify(userExist));
+            localStorage.setItem('isLogged', true);
           } else {
             createSnackbar({
               message: 'Error en el inicio de sesion verifica datos',
@@ -61,7 +63,7 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
     setLoginForm({ ...LoginForm, [name]: value });
   };
   return (
-    <>
+    <Fragment>
       {loading ? (
         <Image src={loadingIcon} size={'128px'} />
       ) : showForm ? (
@@ -88,7 +90,7 @@ function Login({ createSnackbar, backFn, moveToResume, showForm }) {
       ) : (
         <Button value={'Logueate'} type={'secondary'} onClick={backFn} width={'50%'} />
       )}
-    </>
+    </Fragment>
   );
 }
 

@@ -20,4 +20,8 @@ export const StyledButton = styled.button`
   width: ${props => (props.width ? props.width : '100%')};
   outline: none;
   align-self: center;
+
+  :disabled {
+    background-color: ${mainColors.darkGray};
+  }
 `;

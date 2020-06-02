@@ -7,3 +7,18 @@ export const StyledFooter = styled.div`
   color: ${mainColors.white};
   height: '100%';
 `;
+
+export const StyledSafePay = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  img {
+    padding-right: 10px;
+  }
+`;
+
+export const StyledPaymentMethods = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+`;

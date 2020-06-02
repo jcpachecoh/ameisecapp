@@ -16,7 +16,6 @@ const get = (url = '', headers = {}) =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...headers,
     },
   });
 
@@ -25,7 +24,6 @@ const post = (url = '', body = {}, headers = {}) =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...headers,
     },
   });
 
@@ -34,7 +32,6 @@ const put = (url = '', body = {}, headers = {}) =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...headers,
     },
   });
 
@@ -43,7 +40,6 @@ const del = (url = '', headers = {}) =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...headers,
     },
   });
 

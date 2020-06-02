@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import emptyCar from '../../../../public/assets/emptyCar.png';
-
 import Image from '../../Image';
 import Title from '../../Title';
 import Button from '../../Button';

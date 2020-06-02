@@ -8,6 +8,7 @@ import { StyledImageSlider } from './styles';
 
 function ImageSlider({ images }) {
   const settings = {
+    adaptiveHeight: false,
     arrows: false,
     dots: true,
     infinite: true,

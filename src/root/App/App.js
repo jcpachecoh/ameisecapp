@@ -1,19 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { SnackbarProvider } from 'react-snackbar-alert';
 import { useSelector } from 'react-redux';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
-import HomePage from '../../pages/HomePage';
-import CatalogoPage from '../../pages/CatalogoPage';
-import MalePage from '../../pages/MalePage';
-import DotacionesPage from '../../pages/DotacionesPage';
-import ContactoPage from '../../pages/ContactoPage';
-import NoMatchPage from '../../pages/NoMatchPage';
-import ProductPage from '../../pages/ProductPage';
-import CheckoutPage from '../../pages/CheckoutPage';
-import TerminosPage from '../../pages/TerminosPages';
+const HomePage = lazy(() => import('../../pages/HomePage'));
+const CatalogoPage = lazy(() => import('../../pages/CatalogoPage'));
+const MalePage = lazy(() => import('../../pages/MalePage'));
+const DotacionesPage = lazy(() => import('../../pages/DotacionesPage'));
+const ContactoPage = lazy(() => import('../../pages/ContactoPage'));
+const NoMatchPage = lazy(() => import('../../pages/NoMatchPage'));
+const ProductPage = lazy(() => import('../../pages/ProductPage'));
+const CheckoutPage = lazy(() => import('../../pages/CheckoutPage'));
+const TerminosPage = lazy(() => import('../../pages/TerminosPage'));
+const Response = lazy(() => import('../../components/ShopCar/components/Response'));
+const Confirmation = lazy(() => import('../../components/ShopCar/components/Confirmation'));
 
 import { StyledBody } from './styles';
 
@@ -26,7 +28,7 @@ const App = () => {
 
   const shouldBeFixed = displayShoppingCar && articlesLength > 0;
   const history = createBrowserHistory();
-  ReactGA.initialize(trackingId, { testMode: true });
+  ReactGA.initialize(trackingId);
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -37,6 +39,8 @@ const App = () => {
     ReactGA.set({ page: location.pathname }); // Update the user's current page
     ReactGA.pageview(location.pathname); // Record a pageview for the given page
   });
+
+
 
   return (
     <StyledBody shouldBeFixed={shouldBeFixed}>
@@ -49,6 +53,8 @@ const App = () => {
             <Route path="/dotaciones" component={DotacionesPage} />
             <Route path="/contacto" component={ContactoPage} />
             <Route path="/checkout" component={CheckoutPage} />
+            <Route path="/response" component={Response} />
+            <Route path="/checkout/confirmation" component={Confirmation} />
             <Route path="/terminos" component={TerminosPage} />
             <Route path="/producto/:category/:id" component={ProductPage} />
             <Route path={'*'} component={NoMatchPage} />

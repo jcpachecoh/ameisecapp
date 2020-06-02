@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { isDesktop } from '../../utils';
@@ -8,7 +8,7 @@ import { StyledInputText, StyledLabel, StyledErrorLabel } from './styles';
 function InputText({ errorLabel, label, name, placeholder, value, width, onChange, type }) {
   const isDesktopDevice = isDesktop();
   return (
-    <>
+    <Fragment>
       {label && <StyledLabel>{label}</StyledLabel>}
       {errorLabel && <StyledErrorLabel>{errorLabel}</StyledErrorLabel>}
       <StyledInputText
@@ -20,7 +20,7 @@ function InputText({ errorLabel, label, name, placeholder, value, width, onChang
         isDesktopDevice={isDesktopDevice}
         width={width}
       />
-    </>
+    </Fragment>
   );
 }
 

@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Fragment } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import Title from '../../Title';
 
 import { StyledShopCar, StyledItemsContainer } from './styles';
-import ShopCarItem from './ShopCarItem';
-import ShopCarSummary from './ShopCarSummary';
-import EmptyCar from './EmptyCar';
-import SignUpSelection from './SignUpSelection';
-import Resume from './Resume';
-import Summary from './Summary';
+
+const ShopCarItem = lazy(() => import('./ShopCarItem'));
+const ShopCarSummary = lazy(() => import('./ShopCarSummary'));
+const EmptyCar = lazy(() => import('./EmptyCar'));
+const SignUpSelection = lazy(() => import('./SignUpSelection'));
+const Resume = lazy(() => import('./Resume'));
+const Summary = lazy(() => import('./Summary'));
 
 function ShopCar() {
   const history = useHistory();
   const articles = useSelector(state => state.shopCar.articles, shallowEqual);
-  const isLogged = useSelector(state => state.user.isLogged);
+  const isLogged = localStorage.getItem('isLogged');
 
   const [shopState, setshopState] = useState('initial');
   const [orderData, setOrderData] = useState(null);
@@ -56,9 +57,9 @@ function ShopCar() {
     switch (shopState) {
       case 'initial':
         return (
-          <>
+          <Fragment>
             {articles && articles.length ? (
-              <>
+              <Fragment>
                 <Title value={'Carrito de compras'} />
                 <hr />
                 <StyledItemsContainer>
@@ -80,11 +81,11 @@ function ShopCar() {
                   total={total}
                   iva={iva}
                 />
-              </>
+              </Fragment>
             ) : (
               <EmptyCar />
             )}
-          </>
+          </Fragment>
         );
       case 'signup':
         return (

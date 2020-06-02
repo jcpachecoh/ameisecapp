@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import cancelIcon from '../../../../public/assets/cancelIcon.png';
@@ -14,7 +14,7 @@ import Description from './Description';
 
 function GridItemDetails({ itemData, onClose, onSelectSize, handleAddItem }) {
   return (
-    <>
+    <Fragment>
       {itemData && (
         <StyledGridItemDetails>
           <Icon image={cancelIcon} size={'24px'} onClick={onClose} />
@@ -26,7 +26,7 @@ function GridItemDetails({ itemData, onClose, onSelectSize, handleAddItem }) {
           <Button onClick={handleAddItem} value={'Agregar al carrito'} />
         </StyledGridItemDetails>
       )}
-    </>
+    </Fragment>
   );
 }
 

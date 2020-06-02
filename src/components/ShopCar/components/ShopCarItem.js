@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -38,16 +38,16 @@ function ShopCarItem({ item, idx, showDelete, updateShopCar }) {
   };
 
   return (
-    <>
+    <Fragment>
       <StyledShopCarItem>
         <ArticleImage images={item.images} />
-        <ArticleName name={item.name} size={item.size} color={item.color} />
+        <ArticleName name={item.nameGrid} size={item.size} color={item.color} />
         <ArticlePrice price={price} />
         {updateShopCar && <Quantity value={quantity} onChangeValue={onChangeValue} />}
         {showDelete && <Icon image={cancelIcon} size={'32px'} onClick={deleteItem} />}
       </StyledShopCarItem>
       <hr />
-    </>
+    </Fragment>
   );
 }
 
@@ -63,6 +63,7 @@ ShopCarItem.propTypes = {
       }),
     ),
     name: PropTypes.string,
+    nameGrid: PropTypes.string,
     price: PropTypes.number,
     priceUnt: PropTypes.number,
     quantity: PropTypes.number,

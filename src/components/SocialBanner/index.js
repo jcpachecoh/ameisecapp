@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import faaa from '../../../public/assets/faaa.png';
 import whatsapp_1 from '../../../public/assets/whatsapp_1.png';
@@ -14,7 +14,7 @@ function SocialBanner() {
   };
 
   return (
-    <>
+    <Fragment>
       <StyledTitle>Siguenos</StyledTitle>
       <StyledSocialBanner>
         <Icon
@@ -36,7 +36,7 @@ function SocialBanner() {
           dataUrl={'https://instagram.com/dpachecolosal?igshid=18b12w4esynlh'}
         />
       </StyledSocialBanner>
-    </>
+    </Fragment>
   );
 }
 

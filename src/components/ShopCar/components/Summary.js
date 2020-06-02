@@ -13,6 +13,7 @@ import efecty from '../../../../public/assets/efecty.jpeg';
 import pago_contra_entrega from '../../../../public/assets/pago_contra_entrega.png';
 
 import { StyledSummary } from './styles';
+import PaymentDetails from './PaymentDetails';
 
 function Summary({ orderData }) {
   const history = useHistory();
@@ -48,6 +49,7 @@ function Summary({ orderData }) {
         Por favor complete la transaccion usando el metodo escogido <b>{orderData.paymentmethod}</b>
       </span>
       <Image src={getLogo()} size={'260px'} />
+      <PaymentDetails paymentmethod={orderData?.paymentmethod} />
       <hr />
       <Button value={'Volver a la tienda'} width={'50%'} onClick={handleConfirm} />
     </StyledSummary>

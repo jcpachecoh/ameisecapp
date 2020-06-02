@@ -7,7 +7,7 @@ import SH_1318_2 from '../../public/assets/products/SH_1318_2.jpeg';
 import SH_1318_3 from '../../public/assets/products/SH_1318_3.jpeg';
 import SH_1346_1 from '../../public/assets/products/SH_1346_1.jpeg';
 import SH_1346_2 from '../../public/assets/products/SH_1346_2.jpeg';
-import SH_1351_1 from '../../public/assets/products/SH_1351_1.jpeg';
+import SH_1351_1 from '../../public/assets/products/SH_1351_1.jpg';
 import SH_1351_2 from '../../public/assets/products/SH_1351_2.jpeg';
 import SH_1351_3 from '../../public/assets/products/SH_1351_3.jpeg';
 import SH_1351_4 from '../../public/assets/products/SH_1351_4.jpeg';

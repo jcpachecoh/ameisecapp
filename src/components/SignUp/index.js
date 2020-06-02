@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { wrapComponent } from 'react-snackbar-alert';
 
@@ -129,7 +129,7 @@ function SignUp({ createSnackbar, backFn, showForm }) {
     }
   };
   return (
-    <>
+    <Fragment>
       {saved ? (
         <StyledSuccess>
           <Title value={'Tu usuario fue registrado existosamente'} />
@@ -211,7 +211,7 @@ function SignUp({ createSnackbar, backFn, showForm }) {
       ) : (
         <Button value={'Registrate'} type={'secondary'} onClick={backFn} width={'50%'} />
       )}
-    </>
+    </Fragment>
   );
 }
 

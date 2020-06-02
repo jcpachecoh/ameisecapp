@@ -94,7 +94,7 @@ function ProductPage({ match, createSnackbar }) {
       <HamburgerMenu colorBackground />
       <Breadcrump listBreadrump={listBreadrump} />
       <StyledProductContainer>
-        <>
+        <Fragment>
           <StyledSlider>
             <ImageSlider images={productDetails.images} />
           </StyledSlider>
@@ -102,19 +102,19 @@ function ProductPage({ match, createSnackbar }) {
             <ProductTitle title={productDetails.name} textAlign={'left'} />
             {productDetails.description && <Description value={productDetails.description} />}
             {productDetails.colors && (
-              <>
+              <Fragment>
                 <ProductColors
                   colors={productDetails.colors}
                   onSelectColor={onSelectColor}
                   selected={itemData.color}
                 />
-              </>
+              </Fragment>
             )}
             <Price value={productDetails.price} showIva />
             <Dropdown items={productDetails.inventory} onSelectSize={onSelectSize} />
             <Button onClick={handleAddItem} value={'Agregar al carrito'} width="100%" />
           </StyledProductDescription>
-        </>
+        </Fragment>
       </StyledProductContainer>
       <Footer />
     </Fragment>
